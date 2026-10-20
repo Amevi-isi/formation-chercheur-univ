@@ -1,0 +1,86 @@
+{
+  "id": "g5",
+  "title": "Indicateurs économiques et espérance de vie",
+  "question": "Quelle espérance de vie le modèle associe-t-il à cet ensemble d’indicateurs ?",
+  "method": "Forêt aléatoire, évaluée sur des pays tenus à l’écart de l’apprentissage.",
+  "metrics": {
+    "Erreur absolue moyenne sur les pays tests (années)": 3.312
+  },
+  "fields": [
+    {
+      "name": "pib_par_habitant",
+      "label": "PIB par habitant (dollars PPA)",
+      "type": "number",
+      "default": 12942.752,
+      "min": 1036.495,
+      "max": 114907.795,
+      "step": "any"
+    },
+    {
+      "name": "acces_eau",
+      "label": "Accès à l’eau (%)",
+      "type": "number",
+      "default": 93.468,
+      "min": 35.138,
+      "max": 100.0,
+      "step": "any"
+    },
+    {
+      "name": "acces_assainissement",
+      "label": "Accès à l’assainissement (%)",
+      "type": "number",
+      "default": 86.03,
+      "min": 7.792,
+      "max": 100.0,
+      "step": "any"
+    },
+    {
+      "name": "acces_electricite",
+      "label": "Accès à l’électricité (%)",
+      "type": "number",
+      "default": 98.05,
+      "min": 5.714,
+      "max": 100.0,
+      "step": "any"
+    },
+    {
+      "name": "population_urbaine",
+      "label": "Population urbaine (%)",
+      "type": "number",
+      "default": 58.145,
+      "min": 14.189,
+      "max": 100.0,
+      "step": "any"
+    },
+    {
+      "name": "enfants_par_femme",
+      "label": "Nombre d’enfants par femme",
+      "type": "number",
+      "default": 2.391,
+      "min": 1.151,
+      "max": 6.852,
+      "step": "any"
+    },
+    {
+      "name": "depenses_sante",
+      "label": "Dépenses de santé",
+      "type": "number",
+      "default": 5.647,
+      "min": 1.91,
+      "max": 15.11,
+      "step": "any"
+    }
+  ],
+  "example": {
+    "pib_par_habitant": 3086.409,
+    "acces_eau": 62.766,
+    "acces_assainissement": 24.893,
+    "acces_electricite": 57.2,
+    "population_urbaine": 42.733,
+    "enfants_par_femme": 4.253,
+    "depenses_sante": 6.241
+  },
+  "interval90": 6.887,
+  "scope": "Association prédictive entre indicateurs nationaux et espérance de vie.",
+  "warning": "Les variables influentes ne sont pas nécessairement des causes. Le modèle ne simule pas une politique publique."
+}

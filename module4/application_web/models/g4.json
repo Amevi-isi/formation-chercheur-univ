@@ -1,0 +1,185 @@
+{
+  "id": "g4",
+  "title": "Exploration du risque rénal",
+  "question": "À quel groupe du jeu d’apprentissage ce profil clinique ressemble-t-il le plus ?",
+  "method": "Forêt aléatoire sur mesures biologiques et signes cliniques.",
+  "metrics": {
+    "Exactitude — un découpage test": 1.0,
+    "Sensibilité — un découpage test": 1.0
+  },
+  "fields": [
+    {
+      "name": "age",
+      "label": "Age",
+      "type": "number",
+      "default": 55.0,
+      "min": 5.0,
+      "max": 80.01,
+      "step": "any"
+    },
+    {
+      "name": "tension",
+      "label": "Tension",
+      "type": "number",
+      "default": 80.0,
+      "min": 50.0,
+      "max": 110.0,
+      "step": "any"
+    },
+    {
+      "name": "densite_urinaire",
+      "label": "Densité urinaire",
+      "type": "number",
+      "default": 1.02,
+      "min": 1.005,
+      "max": 1.025,
+      "step": "any"
+    },
+    {
+      "name": "albumine_urines",
+      "label": "Albumine urinaire",
+      "type": "number",
+      "default": 0.0,
+      "min": 0.0,
+      "max": 4.0,
+      "step": "any"
+    },
+    {
+      "name": "sucre_urines",
+      "label": "Sucre urinaire",
+      "type": "number",
+      "default": 0.0,
+      "min": 0.0,
+      "max": 4.0,
+      "step": "any"
+    },
+    {
+      "name": "glycemie",
+      "label": "Glycemie",
+      "type": "number",
+      "default": 121.0,
+      "min": 70.0,
+      "max": 425.22,
+      "step": "any"
+    },
+    {
+      "name": "uree",
+      "label": "Uree",
+      "type": "number",
+      "default": 42.0,
+      "min": 15.0,
+      "max": 235.06,
+      "step": "any"
+    },
+    {
+      "name": "creatinine",
+      "label": "Creatinine",
+      "type": "number",
+      "default": 1.3,
+      "min": 0.5,
+      "max": 18.159,
+      "step": "any"
+    },
+    {
+      "name": "sodium",
+      "label": "Sodium",
+      "type": "number",
+      "default": 138.0,
+      "min": 113.99,
+      "max": 150.0,
+      "step": "any"
+    },
+    {
+      "name": "potassium",
+      "label": "Potassium",
+      "type": "number",
+      "default": 4.4,
+      "min": 2.899,
+      "max": 6.401,
+      "step": "any"
+    },
+    {
+      "name": "hemoglobine",
+      "label": "Hemoglobine",
+      "type": "number",
+      "default": 12.65,
+      "min": 5.798,
+      "max": 17.601,
+      "step": "any"
+    },
+    {
+      "name": "hematocrite",
+      "label": "Hematocrite",
+      "type": "number",
+      "default": 40.0,
+      "min": 16.99,
+      "max": 53.01,
+      "step": "any"
+    },
+    {
+      "name": "globules_blancs",
+      "label": "Globules blancs",
+      "type": "number",
+      "default": 8000.0,
+      "min": 4097.0,
+      "max": 16722.0,
+      "step": "any"
+    },
+    {
+      "name": "globules_rouges",
+      "label": "Globules rouges",
+      "type": "number",
+      "default": 4.8,
+      "min": 2.499,
+      "max": 6.5,
+      "step": "any"
+    },
+    {
+      "name": "hypertension",
+      "label": "Hypertension",
+      "type": "boolean",
+      "default": 0,
+      "min": 0,
+      "max": 1,
+      "step": "any"
+    },
+    {
+      "name": "diabete",
+      "label": "Diabete",
+      "type": "boolean",
+      "default": 0,
+      "min": 0,
+      "max": 1,
+      "step": "any"
+    },
+    {
+      "name": "appetit_faible",
+      "label": "Appétit faible",
+      "type": "boolean",
+      "default": 0,
+      "min": 0,
+      "max": 1,
+      "step": "any"
+    },
+    {
+      "name": "oedemes",
+      "label": "Oedemes",
+      "type": "boolean",
+      "default": 0,
+      "min": 0,
+      "max": 1,
+      "step": "any"
+    },
+    {
+      "name": "anemie",
+      "label": "Anemie",
+      "type": "boolean",
+      "default": 0,
+      "min": 0,
+      "max": 1,
+      "step": "any"
+    }
+  ],
+  "scope": "Démonstration méthodologique sur le jeu Chronic Kidney Disease.",
+  "warning": "Ce résultat n’est ni un diagnostic, ni un avis médical. Un score parfait sur ce petit jeu ne constitue pas une validation clinique externe."
+}

@@ -1,0 +1,18 @@
+{
+  "id": "g6",
+  "title": "Attribution de textes historiques",
+  "question": "De quel ouvrage du corpus ce passage est-il lexicalement le plus proche ?",
+  "method": "TF–IDF et régression logistique sur des passages de 200 mots.",
+  "metrics": {
+    "Exactitude sur le jeu test": 0.9406
+  },
+  "classes": [
+    "Conrad",
+    "Equiano",
+    "Kingsley",
+    "Plaatje"
+  ],
+  "example": "CHAPTER I The author's account of his country and their manners and customs Administration of justice Embrenche Marriage ceremony and public entertainments Mode of living Dress Manufactures Buildings Commerce Agriculture War and religion Superstition of the natives Funeral ceremonies of the priests or magicians Curious mode of discovering poison Some hints concerning the origin of the author's countrymen with the opinions of different writers on that subject I believe it is difficult for those who publish their own memoirs to escape the imputation of vanity nor is this the only disadvantage under which they labour it is also their misfortune that what is uncommon is rarely if ever believed and what is obvious we are apt to turn from with disgust and to charge the writer with impertinence People generally think those memoirs only worthy to be read or remembered which abound in great or striking events those in short which in a high degree excite either admiration or pity all others they consign to contempt and oblivion It is therefore I confess not a little hazardous in a private and obscure individual and a stranger too thus to solicit the indulgent attention of the public especial",
+  "scope": "Attribution parmi quatre ouvrages connus du modèle.",
+  "warning": "Le résultat ne prouve ni l’identité d’un auteur, ni l’existence d’une « voix » culturelle ou coloniale."
+}

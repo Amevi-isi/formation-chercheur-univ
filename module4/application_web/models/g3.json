@@ -1,0 +1,87 @@
+{
+  "id": "g3",
+  "title": "Prévision climatique à Lomé",
+  "question": "Quelle température maximale le modèle prévoit-il pour le lendemain ?",
+  "method": "Forêt aléatoire utilisant les conditions de la veille et le mois.",
+  "metrics": {
+    "Erreur absolue moyenne 2019–2024 (°C)": 0.538,
+    "Référence « comme hier » (°C)": 0.621
+  },
+  "fields": [
+    {
+      "name": "tmax_hier",
+      "label": "Température maximale de la veille (°C)",
+      "type": "number",
+      "default": 28.88,
+      "min": 25.306,
+      "max": 32.31,
+      "step": "any"
+    },
+    {
+      "name": "tmin_hier",
+      "label": "Température minimale de la veille (°C)",
+      "type": "number",
+      "default": 25.52,
+      "min": 22.128,
+      "max": 27.66,
+      "step": "any"
+    },
+    {
+      "name": "humidite_hier",
+      "label": "Humidité de la veille (%)",
+      "type": "number",
+      "default": 84.01,
+      "min": 60.862,
+      "max": 91.502,
+      "step": "any"
+    },
+    {
+      "name": "vent_hier",
+      "label": "Vent de la veille",
+      "type": "number",
+      "default": 3.36,
+      "min": 1.59,
+      "max": 5.15,
+      "step": "any"
+    },
+    {
+      "name": "ensoleillement_hier",
+      "label": "Ensoleillement de la veille",
+      "type": "number",
+      "default": 18.11,
+      "min": 7.169,
+      "max": 23.68,
+      "step": "any"
+    },
+    {
+      "name": "pluie_hier",
+      "label": "Pluie de la veille (mm)",
+      "type": "number",
+      "default": 1.5,
+      "min": 0.0,
+      "max": 19.984,
+      "step": "any"
+    },
+    {
+      "name": "mois",
+      "label": "Mois (1 à 12)",
+      "type": "number",
+      "default": 7.0,
+      "min": 1.0,
+      "max": 12.0,
+      "step": "any"
+    }
+  ],
+  "example": {
+    "tmax_hier": 30.96,
+    "tmin_hier": 26.43,
+    "humidite_hier": 78.65,
+    "vent_hier": 2.36,
+    "ensoleillement_hier": 18.7,
+    "pluie_hier": 0.0,
+    "mois": 12.0
+  },
+  "interval90": 1.124,
+  "scope": "Prévision à un jour, dans les conditions climatiques représentées entre 1990 et 2024.",
+  "warning": "Il s’agit d’un exercice historique, pas d’un bulletin météorologique opérationnel."
+}

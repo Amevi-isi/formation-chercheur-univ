@@ -1,0 +1,970 @@
+[
+  {
+    "id": "g1",
+    "title": "Territoire et accès aux soins",
+    "question": "Quelle probabilité de manque de soins le modèle associe-t-il à un profil complet ?",
+    "method": "Forêt aléatoire utilisant les 17 variables effectivement retenues dans le notebook.",
+    "metrics": {
+      "Exactitude sur le jeu test": 0.6739,
+      "Rappel — manque de soins": 0.8421
+    },
+    "regions": [
+      "Centrale",
+      "Kara",
+      "Lomé Commune",
+      "Maritime",
+      "Plateaux",
+      "Savane"
+    ],
+    "milieux": [
+      "rural",
+      "urbain"
+    ],
+    "summaries": [
+      {
+        "region": "Centrale",
+        "milieu": "rural",
+        "n": 87,
+        "observed_rate": 0.6092,
+        "model_rate": 0.641
+      },
+      {
+        "region": "Centrale",
+        "milieu": "urbain",
+        "n": 30,
+        "observed_rate": 0.4333,
+        "model_rate": 0.4494
+      },
+      {
+        "region": "Kara",
+        "milieu": "rural",
+        "n": 94,
+        "observed_rate": 0.7447,
+        "model_rate": 0.7188
+      },
+      {
+        "region": "Kara",
+        "milieu": "urbain",
+        "n": 29,
+        "observed_rate": 0.6897,
+        "model_rate": 0.6211
+      },
+      {
+        "region": "Lomé Commune",
+        "milieu": "urbain",
+        "n": 317,
+        "observed_rate": 0.4259,
+        "model_rate": 0.4514
+      },
+      {
+        "region": "Maritime",
+        "milieu": "rural",
+        "n": 168,
+        "observed_rate": 0.6964,
+        "model_rate": 0.6634
+      },
+      {
+        "region": "Maritime",
+        "milieu": "urbain",
+        "n": 32,
+        "observed_rate": 0.625,
+        "model_rate": 0.5163
+      },
+      {
+        "region": "Plateaux",
+        "milieu": "rural",
+        "n": 173,
+        "observed_rate": 0.6879,
+        "model_rate": 0.6916
+      },
+      {
+        "region": "Plateaux",
+        "milieu": "urbain",
+        "n": 54,
+        "observed_rate": 0.537,
+        "model_rate": 0.5101
+      },
+      {
+        "region": "Savane",
+        "milieu": "rural",
+        "n": 72,
+        "observed_rate": 0.6944,
+        "model_rate": 0.7106
+      },
+      {
+        "region": "Savane",
+        "milieu": "urbain",
+        "n": 16,
+        "observed_rate": 0.4375,
+        "model_rate": 0.5115
+      }
+    ],
+    "fields": [
+      {
+        "name": "urbain",
+        "label": "Milieu de résidence",
+        "type": "choice",
+        "default": 0,
+        "min": 0,
+        "max": 1,
+        "step": "any",
+        "options": [
+          {
+            "value": 0,
+            "label": "Rural"
+          },
+          {
+            "value": 1,
+            "label": "Urbain"
+          }
+        ]
+      },
+      {
+        "name": "age",
+        "label": "Âge",
+        "type": "number",
+        "default": 32.0,
+        "min": 18.0,
+        "max": 72.58,
+        "step": "any"
+      },
+      {
+        "name": "femme",
+        "label": "Sexe",
+        "type": "choice",
+        "default": 0,
+        "min": 0,
+        "max": 1,
+        "step": "any",
+        "options": [
+          {
+            "value": 0,
+            "label": "Homme"
+          },
+          {
+            "value": 1,
+            "label": "Femme"
+          }
+        ]
+      },
+      {
+        "name": "niveau_instruction",
+        "label": "Niveau d’instruction (0 à 9)",
+        "type": "number",
+        "default": 4.0,
+        "min": 0.0,
+        "max": 8.0,
+        "step": "any"
+      },
+      {
+        "name": "electricite_zone",
+        "label": "Électricité présente dans la zone",
+        "type": "boolean",
+        "default": 1,
+        "min": 0,
+        "max": 1,
+        "step": "any"
+      },
+      {
+        "name": "eau_courante_zone",
+        "label": "Eau courante présente dans la zone",
+        "type": "boolean",
+        "default": 0,
+        "min": 0,
+        "max": 1,
+        "step": "any"
+      },
+      {
+        "name": "egouts_zone",
+        "label": "Égouts présents dans la zone",
+        "type": "boolean",
+        "default": 0,
+        "min": 0,
+        "max": 1,
+        "step": "any"
+      },
+      {
+        "name": "forage_zone",
+        "label": "Forage présent dans la zone",
+        "type": "boolean",
+        "default": 1,
+        "min": 0,
+        "max": 1,
+        "step": "any"
+      },
+      {
+        "name": "ecole_zone",
+        "label": "École présente dans la zone",
+        "type": "boolean",
+        "default": 1,
+        "min": 0,
+        "max": 1,
+        "step": "any"
+      },
+      {
+        "name": "centre_sante_zone",
+        "label": "Centre de santé présent dans la zone",
+        "type": "boolean",
+        "default": 1,
+        "min": 0,
+        "max": 1,
+        "step": "any"
+      },
+      {
+        "name": "marche_zone",
+        "label": "Marché présent dans la zone",
+        "type": "boolean",
+        "default": 1,
+        "min": 0,
+        "max": 1,
+        "step": "any"
+      },
+      {
+        "name": "banque_zone",
+        "label": "Banque présente dans la zone",
+        "type": "boolean",
+        "default": 1,
+        "min": 0,
+        "max": 1,
+        "step": "any"
+      },
+      {
+        "name": "transport_zone",
+        "label": "Transport disponible dans la zone",
+        "type": "boolean",
+        "default": 1,
+        "min": 0,
+        "max": 1,
+        "step": "any"
+      },
+      {
+        "name": "menage_radio",
+        "label": "Radio dans le ménage",
+        "type": "boolean",
+        "default": 1,
+        "min": 0,
+        "max": 1,
+        "step": "any"
+      },
+      {
+        "name": "menage_television",
+        "label": "Télévision dans le ménage",
+        "type": "boolean",
+        "default": 1,
+        "min": 0,
+        "max": 1,
+        "step": "any"
+      },
+      {
+        "name": "menage_ordinateur",
+        "label": "Ordinateur dans le ménage",
+        "type": "boolean",
+        "default": 0,
+        "min": 0,
+        "max": 1,
+        "step": "any"
+      },
+      {
+        "name": "menage_compte_bancaire",
+        "label": "Compte bancaire dans le ménage",
+        "type": "boolean",
+        "default": 0,
+        "min": 0,
+        "max": 1,
+        "step": "any"
+      }
+    ],
+    "example": {
+      "urbain": 0.0,
+      "age": 32.0,
+      "femme": 0.5,
+      "niveau_instruction": 4.0,
+      "electricite_zone": 1.0,
+      "eau_courante_zone": 0.0,
+      "egouts_zone": 0.0,
+      "forage_zone": 1.0,
+      "ecole_zone": 1.0,
+      "centre_sante_zone": 1.0,
+      "marche_zone": 1.0,
+      "banque_zone": 1.0,
+      "transport_zone": 1.0,
+      "menage_radio": 1.0,
+      "menage_television": 1.0,
+      "menage_ordinateur": 0.0,
+      "menage_compte_bancaire": 0.0
+    },
+    "n": 1072,
+    "scope": "Inférence sur des profils décrits par les mêmes 17 variables que les 1 072 observations exploitables de l’enquête.",
+    "warning": "La probabilité produite décrit le comportement du modèle. Elle ne mesure pas une causalité et ne doit pas servir seule à décider pour une personne."
+  },
+  {
+    "id": "g2",
+    "title": "Caractérisation de variétés de haricots",
+    "question": "À quelle variété un grain ressemble-t-il au regard de ses mesures morphologiques ?",
+    "method": "Forêt aléatoire entraînée sur 16 mesures numériques.",
+    "metrics": {
+      "Exactitude sur le jeu test": 0.9197
+    },
+    "fields": [
+      {
+        "name": "surface",
+        "label": "Surface",
+        "type": "number",
+        "default": 44652.0,
+        "min": 24312.1,
+        "max": 186371.2,
+        "step": "any"
+      },
+      {
+        "name": "perimetre",
+        "label": "Perimetre",
+        "type": "number",
+        "default": 794.941,
+        "min": 577.659,
+        "max": 1654.073,
+        "step": "any"
+      },
+      {
+        "name": "grand_axe",
+        "label": "Grand axe",
+        "type": "number",
+        "default": 296.883,
+        "min": 210.158,
+        "max": 628.302,
+        "step": "any"
+      },
+      {
+        "name": "petit_axe",
+        "label": "Petit axe",
+        "type": "number",
+        "default": 192.432,
+        "min": 144.023,
+        "max": 387.354,
+        "step": "any"
+      },
+      {
+        "name": "allongement",
+        "label": "Allongement",
+        "type": "number",
+        "default": 1.551,
+        "min": 1.139,
+        "max": 2.205,
+        "step": "any"
+      },
+      {
+        "name": "excentricite",
+        "label": "Excentricite",
+        "type": "number",
+        "default": 0.764,
+        "min": 0.479,
+        "max": 0.891,
+        "step": "any"
+      },
+      {
+        "name": "surface_convexe",
+        "label": "Surface convexe",
+        "type": "number",
+        "default": 45178.0,
+        "min": 24647.2,
+        "max": 188821.3,
+        "step": "any"
+      },
+      {
+        "name": "diametre_equivalent",
+        "label": "Diametre equivalent",
+        "type": "number",
+        "default": 238.438,
+        "min": 175.941,
+        "max": 487.13,
+        "step": "any"
+      },
+      {
+        "name": "etendue",
+        "label": "Etendue",
+        "type": "number",
+        "default": 0.76,
+        "min": 0.603,
+        "max": 0.826,
+        "step": "any"
+      },
+      {
+        "name": "solidite",
+        "label": "Solidite",
+        "type": "number",
+        "default": 0.988,
+        "min": 0.97,
+        "max": 0.993,
+        "step": "any"
+      },
+      {
+        "name": "rondeur",
+        "label": "Rondeur",
+        "type": "number",
+        "default": 0.883,
+        "min": 0.719,
+        "max": 0.973,
+        "step": "any"
+      },
+      {
+        "name": "compacite",
+        "label": "Compacite",
+        "type": "number",
+        "default": 0.801,
+        "min": 0.671,
+        "max": 0.936,
+        "step": "any"
+      },
+      {
+        "name": "facteur_forme_1",
+        "label": "Facteur forme 1",
+        "type": "number",
+        "default": 0.007,
+        "min": 0.003,
+        "max": 0.009,
+        "step": "any"
+      },
+      {
+        "name": "facteur_forme_2",
+        "label": "Facteur forme 2",
+        "type": "number",
+        "default": 0.002,
+        "min": 0.001,
+        "max": 0.003,
+        "step": "any"
+      },
+      {
+        "name": "facteur_forme_3",
+        "label": "Facteur forme 3",
+        "type": "number",
+        "default": 0.642,
+        "min": 0.451,
+        "max": 0.876,
+        "step": "any"
+      },
+      {
+        "name": "facteur_forme_4",
+        "label": "Facteur forme 4",
+        "type": "number",
+        "default": 0.996,
+        "min": 0.979,
+        "max": 0.999,
+        "step": "any"
+      }
+    ],
+    "examples": {
+      "BARBUNYA": {
+        "surface": 69582.0,
+        "perimetre": 1045.06,
+        "grand_axe": 369.63,
+        "petit_axe": 239.722,
+        "allongement": 1.548,
+        "excentricite": 0.763,
+        "surface_convexe": 70802.0,
+        "diametre_equivalent": 297.648,
+        "etendue": 0.751,
+        "solidite": 0.983,
+        "rondeur": 0.803,
+        "compacite": 0.802,
+        "facteur_forme_1": 0.005,
+        "facteur_forme_2": 0.001,
+        "facteur_forme_3": 0.644,
+        "facteur_forme_4": 0.996
+      },
+      "BOMBAY": {
+        "surface": 171494.5,
+        "perimetre": 1586.237,
+        "grand_axe": 590.676,
+        "petit_axe": 371.649,
+        "allongement": 1.586,
+        "excentricite": 0.776,
+        "surface_convexe": 173586.5,
+        "diametre_equivalent": 467.283,
+        "etendue": 0.784,
+        "solidite": 0.988,
+        "rondeur": 0.865,
+        "compacite": 0.791,
+        "facteur_forme_1": 0.003,
+        "facteur_forme_2": 0.001,
+        "facteur_forme_3": 0.626,
+        "facteur_forme_4": 0.993
+      },
+      "CALI": {
+        "surface": 74791.5,
+        "perimetre": 1055.472,
+        "grand_axe": 408.783,
+        "petit_axe": 235.411,
+        "allongement": 1.734,
+        "excentricite": 0.817,
+        "surface_convexe": 75961.5,
+        "diametre_equivalent": 308.59,
+        "etendue": 0.766,
+        "solidite": 0.986,
+        "rondeur": 0.847,
+        "compacite": 0.755,
+        "facteur_forme_1": 0.005,
+        "facteur_forme_2": 0.001,
+        "facteur_forme_3": 0.571,
+        "facteur_forme_4": 0.991
+      },
+      "DERMASON": {
+        "surface": 31890.0,
+        "perimetre": 664.523,
+        "grand_axe": 246.546,
+        "petit_axe": 165.762,
+        "allongement": 1.485,
+        "excentricite": 0.739,
+        "surface_convexe": 32271.5,
+        "diametre_equivalent": 201.503,
+        "etendue": 0.754,
+        "solidite": 0.989,
+        "rondeur": 0.912,
+        "compacite": 0.82,
+        "facteur_forme_1": 0.008,
+        "facteur_forme_2": 0.002,
+        "facteur_forme_3": 0.672,
+        "facteur_forme_4": 0.997
+      },
+      "HOROZ": {
+        "surface": 53800.5,
+        "perimetre": 921.395,
+        "grand_axe": 374.366,
+        "petit_axe": 183.837,
+        "allongement": 2.037,
+        "excentricite": 0.871,
+        "surface_convexe": 54581.5,
+        "diametre_equivalent": 261.727,
+        "etendue": 0.704,
+        "solidite": 0.987,
+        "rondeur": 0.796,
+        "compacite": 0.698,
+        "facteur_forme_1": 0.007,
+        "facteur_forme_2": 0.001,
+        "facteur_forme_3": 0.487,
+        "facteur_forme_4": 0.994
+      },
+      "SEKER": {
+        "surface": 39180.0,
+        "perimetre": 721.292,
+        "grand_axe": 249.152,
+        "petit_axe": 200.433,
+        "allongement": 1.236,
+        "excentricite": 0.588,
+        "surface_convexe": 39539.0,
+        "diametre_equivalent": 223.351,
+        "etendue": 0.774,
+        "solidite": 0.991,
+        "rondeur": 0.952,
+        "compacite": 0.899,
+        "facteur_forme_1": 0.006,
+        "facteur_forme_2": 0.003,
+        "facteur_forme_3": 0.808,
+        "facteur_forme_4": 0.999
+      },
+      "SIRA": {
+        "surface": 44593.0,
+        "perimetre": 794.99,
+        "grand_axe": 298.586,
+        "petit_axe": 190.935,
+        "allongement": 1.562,
+        "excentricite": 0.768,
+        "surface_convexe": 45160.5,
+        "diametre_equivalent": 238.28,
+        "etendue": 0.753,
+        "solidite": 0.989,
+        "rondeur": 0.887,
+        "compacite": 0.798,
+        "facteur_forme_1": 0.007,
+        "facteur_forme_2": 0.002,
+        "facteur_forme_3": 0.637,
+        "facteur_forme_4": 0.996
+      }
+    },
+    "classes": [
+      "BARBUNYA",
+      "BOMBAY",
+      "CALI",
+      "DERMASON",
+      "HOROZ",
+      "SEKER",
+      "SIRA"
+    ],
+    "scope": "Classification morphométrique sur les variétés présentes dans le jeu d’apprentissage.",
+    "warning": "Le modèle ne traite aucune image et ne peut reconnaître une variété absente de son apprentissage."
+  },
+  {
+    "id": "g3",
+    "title": "Prévision climatique à Lomé",
+    "question": "Quelle température maximale le modèle prévoit-il pour le lendemain ?",
+    "method": "Forêt aléatoire utilisant les conditions de la veille et le mois.",
+    "metrics": {
+      "Erreur absolue moyenne 2019–2024 (°C)": 0.538,
+      "Référence « comme hier » (°C)": 0.621
+    },
+    "fields": [
+      {
+        "name": "tmax_hier",
+        "label": "Température maximale de la veille (°C)",
+        "type": "number",
+        "default": 28.88,
+        "min": 25.306,
+        "max": 32.31,
+        "step": "any"
+      },
+      {
+        "name": "tmin_hier",
+        "label": "Température minimale de la veille (°C)",
+        "type": "number",
+        "default": 25.52,
+        "min": 22.128,
+        "max": 27.66,
+        "step": "any"
+      },
+      {
+        "name": "humidite_hier",
+        "label": "Humidité de la veille (%)",
+        "type": "number",
+        "default": 84.01,
+        "min": 60.862,
+        "max": 91.502,
+        "step": "any"
+      },
+      {
+        "name": "vent_hier",
+        "label": "Vent de la veille",
+        "type": "number",
+        "default": 3.36,
+        "min": 1.59,
+        "max": 5.15,
+        "step": "any"
+      },
+      {
+        "name": "ensoleillement_hier",
+        "label": "Ensoleillement de la veille",
+        "type": "number",
+        "default": 18.11,
+        "min": 7.169,
+        "max": 23.68,
+        "step": "any"
+      },
+      {
+        "name": "pluie_hier",
+        "label": "Pluie de la veille (mm)",
+        "type": "number",
+        "default": 1.5,
+        "min": 0.0,
+        "max": 19.984,
+        "step": "any"
+      },
+      {
+        "name": "mois",
+        "label": "Mois (1 à 12)",
+        "type": "number",
+        "default": 7.0,
+        "min": 1.0,
+        "max": 12.0,
+        "step": "any"
+      }
+    ],
+    "example": {
+      "tmax_hier": 30.96,
+      "tmin_hier": 26.43,
+      "humidite_hier": 78.65,
+      "vent_hier": 2.36,
+      "ensoleillement_hier": 18.7,
+      "pluie_hier": 0.0,
+      "mois": 12.0
+    },
+    "interval90": 1.124,
+    "scope": "Prévision à un jour, dans les conditions climatiques représentées entre 1990 et 2024.",
+    "warning": "Il s’agit d’un exercice historique, pas d’un bulletin météorologique opérationnel."
+  },
+  {
+    "id": "g4",
+    "title": "Exploration du risque rénal",
+    "question": "À quel groupe du jeu d’apprentissage ce profil clinique ressemble-t-il le plus ?",
+    "method": "Forêt aléatoire sur mesures biologiques et signes cliniques.",
+    "metrics": {
+      "Exactitude — un découpage test": 1.0,
+      "Sensibilité — un découpage test": 1.0
+    },
+    "fields": [
+      {
+        "name": "age",
+        "label": "Age",
+        "type": "number",
+        "default": 55.0,
+        "min": 5.0,
+        "max": 80.01,
+        "step": "any"
+      },
+      {
+        "name": "tension",
+        "label": "Tension",
+        "type": "number",
+        "default": 80.0,
+        "min": 50.0,
+        "max": 110.0,
+        "step": "any"
+      },
+      {
+        "name": "densite_urinaire",
+        "label": "Densité urinaire",
+        "type": "number",
+        "default": 1.02,
+        "min": 1.005,
+        "max": 1.025,
+        "step": "any"
+      },
+      {
+        "name": "albumine_urines",
+        "label": "Albumine urinaire",
+        "type": "number",
+        "default": 0.0,
+        "min": 0.0,
+        "max": 4.0,
+        "step": "any"
+      },
+      {
+        "name": "sucre_urines",
+        "label": "Sucre urinaire",
+        "type": "number",
+        "default": 0.0,
+        "min": 0.0,
+        "max": 4.0,
+        "step": "any"
+      },
+      {
+        "name": "glycemie",
+        "label": "Glycemie",
+        "type": "number",
+        "default": 121.0,
+        "min": 70.0,
+        "max": 425.22,
+        "step": "any"
+      },
+      {
+        "name": "uree",
+        "label": "Uree",
+        "type": "number",
+        "default": 42.0,
+        "min": 15.0,
+        "max": 235.06,
+        "step": "any"
+      },
+      {
+        "name": "creatinine",
+        "label": "Creatinine",
+        "type": "number",
+        "default": 1.3,
+        "min": 0.5,
+        "max": 18.159,
+        "step": "any"
+      },
+      {
+        "name": "sodium",
+        "label": "Sodium",
+        "type": "number",
+        "default": 138.0,
+        "min": 113.99,
+        "max": 150.0,
+        "step": "any"
+      },
+      {
+        "name": "potassium",
+        "label": "Potassium",
+        "type": "number",
+        "default": 4.4,
+        "min": 2.899,
+        "max": 6.401,
+        "step": "any"
+      },
+      {
+        "name": "hemoglobine",
+        "label": "Hemoglobine",
+        "type": "number",
+        "default": 12.65,
+        "min": 5.798,
+        "max": 17.601,
+        "step": "any"
+      },
+      {
+        "name": "hematocrite",
+        "label": "Hematocrite",
+        "type": "number",
+        "default": 40.0,
+        "min": 16.99,
+        "max": 53.01,
+        "step": "any"
+      },
+      {
+        "name": "globules_blancs",
+        "label": "Globules blancs",
+        "type": "number",
+        "default": 8000.0,
+        "min": 4097.0,
+        "max": 16722.0,
+        "step": "any"
+      },
+      {
+        "name": "globules_rouges",
+        "label": "Globules rouges",
+        "type": "number",
+        "default": 4.8,
+        "min": 2.499,
+        "max": 6.5,
+        "step": "any"
+      },
+      {
+        "name": "hypertension",
+        "label": "Hypertension",
+        "type": "boolean",
+        "default": 0,
+        "min": 0,
+        "max": 1,
+        "step": "any"
+      },
+      {
+        "name": "diabete",
+        "label": "Diabete",
+        "type": "boolean",
+        "default": 0,
+        "min": 0,
+        "max": 1,
+        "step": "any"
+      },
+      {
+        "name": "appetit_faible",
+        "label": "Appétit faible",
+        "type": "boolean",
+        "default": 0,
+        "min": 0,
+        "max": 1,
+        "step": "any"
+      },
+      {
+        "name": "oedemes",
+        "label": "Oedemes",
+        "type": "boolean",
+        "default": 0,
+        "min": 0,
+        "max": 1,
+        "step": "any"
+      },
+      {
+        "name": "anemie",
+        "label": "Anemie",
+        "type": "boolean",
+        "default": 0,
+        "min": 0,
+        "max": 1,
+        "step": "any"
+      }
+    ],
+    "scope": "Démonstration méthodologique sur le jeu Chronic Kidney Disease.",
+    "warning": "Ce résultat n’est ni un diagnostic, ni un avis médical. Un score parfait sur ce petit jeu ne constitue pas une validation clinique externe."
+  },
+  {
+    "id": "g5",
+    "title": "Indicateurs économiques et espérance de vie",
+    "question": "Quelle espérance de vie le modèle associe-t-il à cet ensemble d’indicateurs ?",
+    "method": "Forêt aléatoire, évaluée sur des pays tenus à l’écart de l’apprentissage.",
+    "metrics": {
+      "Erreur absolue moyenne sur les pays tests (années)": 3.312
+    },
+    "fields": [
+      {
+        "name": "pib_par_habitant",
+        "label": "PIB par habitant (dollars PPA)",
+        "type": "number",
+        "default": 12942.752,
+        "min": 1036.495,
+        "max": 114907.795,
+        "step": "any"
+      },
+      {
+        "name": "acces_eau",
+        "label": "Accès à l’eau (%)",
+        "type": "number",
+        "default": 93.468,
+        "min": 35.138,
+        "max": 100.0,
+        "step": "any"
+      },
+      {
+        "name": "acces_assainissement",
+        "label": "Accès à l’assainissement (%)",
+        "type": "number",
+        "default": 86.03,
+        "min": 7.792,
+        "max": 100.0,
+        "step": "any"
+      },
+      {
+        "name": "acces_electricite",
+        "label": "Accès à l’électricité (%)",
+        "type": "number",
+        "default": 98.05,
+        "min": 5.714,
+        "max": 100.0,
+        "step": "any"
+      },
+      {
+        "name": "population_urbaine",
+        "label": "Population urbaine (%)",
+        "type": "number",
+        "default": 58.145,
+        "min": 14.189,
+        "max": 100.0,
+        "step": "any"
+      },
+      {
+        "name": "enfants_par_femme",
+        "label": "Nombre d’enfants par femme",
+        "type": "number",
+        "default": 2.391,
+        "min": 1.151,
+        "max": 6.852,
+        "step": "any"
+      },
+      {
+        "name": "depenses_sante",
+        "label": "Dépenses de santé",
+        "type": "number",
+        "default": 5.647,
+        "min": 1.91,
+        "max": 15.11,
+        "step": "any"
+      }
+    ],
+    "example": {
+      "pib_par_habitant": 3086.409,
+      "acces_eau": 62.766,
+      "acces_assainissement": 24.893,
+      "acces_electricite": 57.2,
+      "population_urbaine": 42.733,
+      "enfants_par_femme": 4.253,
+      "depenses_sante": 6.241
+    },
+    "interval90": 6.887,
+    "scope": "Association prédictive entre indicateurs nationaux et espérance de vie.",
+    "warning": "Les variables influentes ne sont pas nécessairement des causes. Le modèle ne simule pas une politique publique."
+  },
+  {
+    "id": "g6",
+    "title": "Attribution de textes historiques",
+    "question": "De quel ouvrage du corpus ce passage est-il lexicalement le plus proche ?",
+    "method": "TF–IDF et régression logistique sur des passages de 200 mots.",
+    "metrics": {
+      "Exactitude sur le jeu test": 0.9406
+    },
+    "classes": [
+      "Conrad",
+      "Equiano",
+      "Kingsley",
+      "Plaatje"
+    ],
+    "example": "CHAPTER I The author's account of his country and their manners and customs Administration of justice Embrenche Marriage ceremony and public entertainments Mode of living Dress Manufactures Buildings Commerce Agriculture War and religion Superstition of the natives Funeral ceremonies of the priests or magicians Curious mode of discovering poison Some hints concerning the origin of the author's countrymen with the opinions of different writers on that subject I believe it is difficult for those who publish their own memoirs to escape the imputation of vanity nor is this the only disadvantage under which they labour it is also their misfortune that what is uncommon is rarely if ever believed and what is obvious we are apt to turn from with disgust and to charge the writer with impertinence People generally think those memoirs only worthy to be read or remembered which abound in great or striking events those in short which in a high degree excite either admiration or pity all others they consign to contempt and oblivion It is therefore I confess not a little hazardous in a private and obscure individual and a stranger too thus to solicit the indulgent attention of the public especial",
+    "scope": "Attribution parmi quatre ouvrages connus du modèle.",
+    "warning": "Le résultat ne prouve ni l’identité d’un auteur, ni l’existence d’une « voix » culturelle ou coloniale."
+  }
+]

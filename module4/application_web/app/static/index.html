@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Laboratoire d’expérimentation des modèles développés pendant la journée J4.">
+  <title>Laboratoire IA — ProDigiT</title>
+  <link rel="stylesheet" href="/static/styles.css?v=1.0.2">
+</head>
+<body>
+  <div class="shell">
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-copy">
+          <h1>Interrogez un modèle.<br><em>Examinez sa réponse.</em></h1>
+          <div class="hero-actions">
+            <button class="primary" data-open="g1">Ouvrir le TP 1</button>
+            <a href="#laboratoires">Voir les six laboratoires</a>
+          </div>
+        </div>
+        <div class="hero-principle" aria-label="Principe de travail">
+          <span class="principle-number">01</span>
+          <p>Formulez votre question à partir des données.</p>
+          <span class="principle-number">02</span>
+          <p>Examinez le résultat et son incertitude.</p>
+          <span class="principle-number">03</span>
+          <p>Décidez ce que vous pouvez raisonnablement conclure.</p>
+        </div>
+      </section>
+
+      <section class="labs" id="laboratoires">
+        <div class="section-heading">
+          <div><p class="eyebrow">Six objets de recherche</p><h2>Choisir un laboratoire</h2></div>
+        </div>
+        <div class="lab-grid" id="lab-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="method-strip">
+        <p class="eyebrow">Une discipline commune</p>
+        <div class="method-flow">
+          <span>Question</span><b>→</b><span>Données</span><b>→</b><span>Modèle</span><b>→</b><span>Résultat</span><b>→</b><span>Limites</span>
+        </div>
+      </section>
+    </main>
+
+    <footer><span>Prototype pédagogique — J4</span><span>Le modèle complète votre expertise disciplinaire ; il ne s’y substitue pas.</span></footer>
+  </div>
+
+  <dialog id="lab-dialog">
+    <div class="dialog-shell">
+      <header class="dialog-header">
+        <button class="back" id="close-dialog" aria-label="Fermer">← Retour aux laboratoires</button>
+        <span class="model-version">MODÈLE LOCAL · V1</span>
+      </header>
+      <div class="dialog-title">
+        <p class="eyebrow" id="dialog-kicker"></p>
+        <h2 id="dialog-title"></h2>
+        <p id="dialog-question"></p>
+      </div>
+      <div class="workspace">
+        <aside class="model-card">
+          <section><span class="label">Méthode</span><p id="dialog-method"></p></section>
+          <section><span class="label">Domaine de validité</span><p id="dialog-scope"></p></section>
+          <section class="metrics"><span class="label">Validation</span><div id="dialog-metrics"></div></section>
+          <section class="warning"><span class="label">Limites d’interprétation</span><p id="dialog-warning"></p></section>
+        </aside>
+        <section class="experiment">
+          <div class="experiment-heading">
+            <div><span class="step">Expérience</span><h3 id="form-title">Soumettre un cas</h3></div>
+            <button class="secondary" id="load-example">Utiliser un cas d’exemple</button>
+          </div>
+          <form id="prediction-form"></form>
+          <div class="form-actions">
+            <button class="primary" form="prediction-form" type="submit">Lancer l’analyse</button>
+            <span id="form-state" role="status"></span>
+          </div>
+          <div class="result empty" id="result-panel" aria-live="polite">
+            <p>Avant de lancer l’analyse, notez le résultat auquel vous vous attendez. Vous pourrez ensuite le confronter à celui du modèle.</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </dialog>
+  <script src="/static/app.js?v=1.0.3" defer></script>
+</body>
+</html>
