@@ -1,0 +1,117 @@
+{
+  "module": "NER clinique et OCR",
+  "public": "IT",
+  "seuil": 8,
+  "questions": [
+    {
+      "q": "Dans le format BIO, que signifient B, I et O ?",
+      "options": [
+        "B = début d’entité, I = intérieur de l’entité, O = hors entité",
+        "B = bon, I = incorrect, O = oubli",
+        "B = base, I = index, O = ordre",
+        "B = binaire, I = entier, O = objet"
+      ],
+      "answer": 0,
+      "expl": "Les étiquettes « B-DOSE I-DOSE O » permettent de représenter des entités de plusieurs mots."
+    },
+    {
+      "q": "Que signifie une évaluation NER « stricte » au niveau de l’entité ?",
+      "options": [
+        "On compte chaque token séparément",
+        "Une entité n’est correcte que si ses limites et son type sont exacts",
+        "On ignore le type de l’entité",
+        "On ne compte que les entités trouvées en premier"
+      ],
+      "answer": 1,
+      "expl": "Un « 500 » prédit au lieu de « 500 mg » est une erreur en évaluation stricte."
+    },
+    {
+      "q": "Quelle est la force principale d’une approche à base de règles et de dictionnaires ?",
+      "options": [
+        "Elle généralise à tous les styles d’écriture",
+        "Elle comprend le contexte",
+        "Précision élevée sur les formats réguliers (doses, dates), sans données d’entraînement",
+        "Elle n’a jamais besoin de maintenance"
+      ],
+      "answer": 2,
+      "expl": "Elle échoue vite sur les variantes : d’où la complémentarité avec des modèles appris."
+    },
+    {
+      "q": "À quoi sert la détection de négation (type NegEx) ?",
+      "options": [
+        "À supprimer les mots négatifs",
+        "À traduire les phrases",
+        "À corriger les accents",
+        "À savoir si un problème repéré est affirmé, nié ou incertain"
+      ],
+      "answer": 3,
+      "expl": "Sans elle, « pas de fièvre » serait traité comme « fièvre »."
+    },
+    {
+      "q": "Pourquoi séparer les données par patient et non par phrase pour évaluer un NER ?",
+      "options": [
+        "Pour réduire le nombre de phrases",
+        "Parce que la loi l’impose toujours",
+        "Pour éviter qu’un même patient apparaisse en entraînement et en test (fuite de données)",
+        "Pour accélérer le calcul"
+      ],
+      "answer": 2,
+      "expl": "Les phrases d’un même dossier se ressemblent : la note serait gonflée."
+    },
+    {
+      "q": "Avec un modèle Transformer, pourquoi faut-il « réaligner » les prédictions NER ?",
+      "options": [
+        "Les étiquettes sont prédites sur des sous-mots, alors qu’on veut des entités sur le texte d’origine",
+        "Parce que le modèle ne prédit que la première lettre",
+        "Parce que les étiquettes sont chiffrées",
+        "Parce que le texte est converti en images"
+      ],
+      "answer": 0,
+      "expl": "On agrège les sous-mots (aggregation_strategy ou word_ids) pour reconstruire les entités."
+    },
+    {
+      "q": "Quelle étape améliore souvent l’OCR avant la reconnaissance ?",
+      "options": [
+        "Traduire l’image",
+        "Compresser fortement le fichier",
+        "Ajouter du bruit à l’image",
+        "Le prétraitement : niveaux de gris, redressement, binarisation, résolution suffisante"
+      ],
+      "answer": 3,
+      "expl": "Une image propre et bien contrastée réduit les erreurs de lecture."
+    },
+    {
+      "q": "Que mesure le taux d’erreur de caractères (CER) ?",
+      "options": [
+        "Le nombre de pages lues par minute",
+        "La distance d’édition entre le texte reconnu et la référence, rapportée à la longueur de la référence",
+        "La taille de l’image",
+        "Le nombre de mots du dictionnaire"
+      ],
+      "answer": 1,
+      "expl": "Plus le CER est bas, meilleur est l’OCR. On mesure sur des documents représentatifs."
+    },
+    {
+      "q": "Une erreur OCR change « 500 » en « 5OO ». Quelle protection mettre en place ?",
+      "options": [
+        "Aucune : le NER corrigera",
+        "Supprimer toutes les doses",
+        "Augmenter la taille de police",
+        "Validation par règles (formats de dose), seuils de confiance et relecture humaine"
+      ],
+      "answer": 3,
+      "expl": "Les erreurs se propagent de l’OCR vers l’extraction : on contrôle à chaque étape."
+    },
+    {
+      "q": "Avant d’utiliser un service OCR cloud sur des dossiers de santé, que faut-il vérifier ?",
+      "options": [
+        "Rien, tant que le service est gratuit",
+        "Uniquement la vitesse",
+        "Le cadre légal, l’hébergement des données et la possibilité de pseudonymiser en amont",
+        "Uniquement le prix"
+      ],
+      "answer": 2,
+      "expl": "Une solution locale (Tesseract, modèles hébergés chez vous) évite l’envoi de données sensibles à l’extérieur."
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "module": "Pipelines de données",
+  "public": "non-IT",
+  "seuil": 8,
+  "questions": [
+    {
+      "q": "Qu’est-ce qu’un « pipeline de données » ?",
+      "options": [
+        "Un câble qui relie deux ordinateurs",
+        "Un logiciel de dessin",
+        "Un modèle d’intelligence artificielle",
+        "Une chaîne d’étapes automatisées qui transforme des données brutes en données propres et utilisables"
+      ],
+      "answer": 3,
+      "expl": "Comme une chaîne de production : des matières premières entrent, un produit fini sort, avec des contrôles à chaque étape."
+    },
+    {
+      "q": "Pourquoi dit-on « données d’entrée de mauvaise qualité, résultats de mauvaise qualité » ?",
+      "options": [
+        "Parce que les ordinateurs sont lents",
+        "Parce que les données coûtent cher",
+        "Parce qu’un modèle ou un tableau de bord ne peut pas corriger des données fausses",
+        "Parce que les modèles refusent les fichiers"
+      ],
+      "answer": 2,
+      "expl": "La qualité des résultats ne dépassera jamais celle des données : d’où l’importance du nettoyage et des contrôles."
+    },
+    {
+      "q": "Un registre contient deux fois la même personne avec les mêmes informations. De quel problème s’agit-il ?",
+      "options": [
+        "D’un doublon",
+        "D’une donnée anonymisée",
+        "D’un format de date",
+        "D’une donnée chiffrée"
+      ],
+      "answer": 0,
+      "expl": "Les doublons faussent les comptes : on les repère et on n’en garde qu’une ligne."
+    },
+    {
+      "q": "La localité s’écrit « Kara », « KARA » et « kara » selon les lignes. Que faire ?",
+      "options": [
+        "Rien : ce sont trois localités différentes",
+        "Uniformiser l’écriture pour que la machine les compte comme une seule localité",
+        "Supprimer ces lignes",
+        "Ne garder que la majuscule"
+      ],
+      "answer": 1,
+      "expl": "Une machine voit trois valeurs différentes : on ramène les variantes à une forme unique."
+    },
+    {
+      "q": "Une fiche indique une date de naissance en 2030. Que faire ?",
+      "options": [
+        "La garder telle quelle",
+        "La remplacer par la date du jour",
+        "La signaler comme impossible et la faire vérifier à la source",
+        "La supprimer sans rien dire"
+      ],
+      "answer": 2,
+      "expl": "Une règle de validation détecte l’anomalie ; une personne qui connaît le terrain tranche."
+    },
+    {
+      "q": "Pourquoi ne faut-il pas supprimer sans trace les lignes « mauvaises » ?",
+      "options": [
+        "Parce que cela prend de la place",
+        "Parce que c’est interdit par principe",
+        "Parce que les machines ne savent pas supprimer",
+        "Pour pouvoir expliquer ce qui a été retiré et pourquoi, et corriger à la source"
+      ],
+      "answer": 3,
+      "expl": "La traçabilité permet de comprendre les écarts, de corriger la collecte et de garder la confiance dans les chiffres."
+    },
+    {
+      "q": "Qu’est-ce que l’anonymisation ?",
+      "options": [
+        "Chiffrer un fichier avec un mot de passe",
+        "Traduire les noms en anglais",
+        "Retirer ou transformer les éléments qui permettent d’identifier une personne",
+        "Supprimer toutes les données"
+      ],
+      "answer": 2,
+      "expl": "On garde ce qui sert à l’analyse (âge, localité) et on retire ou masque ce qui identifie (nom, numéro, adresse précise)."
+    },
+    {
+      "q": "Quelle bonne pratique s’applique aux données personnelles de santé dans un pipeline ?",
+      "options": [
+        "Ne collecter que ce qui est nécessaire, limiter les accès et tracer qui consulte quoi",
+        "Les copier dans plusieurs dossiers partagés",
+        "Les envoyer par messagerie grand public",
+        "Les garder indéfiniment, au cas où"
+      ],
+      "answer": 0,
+      "expl": "Minimisation, accès restreint et traçabilité : ce sont des bases de la protection des données."
+    },
+    {
+      "q": "Qui est responsable de la qualité des données d’un pipeline ?",
+      "options": [
+        "Personne en particulier : la machine s’en charge",
+        "Uniquement les informaticiens",
+        "Uniquement les utilisateurs finaux",
+        "Une personne ou un service clairement désigné, avec des contrôles à chaque étape"
+      ],
+      "answer": 3,
+      "expl": "Sans responsable identifié, les erreurs ne sont corrigées par personne."
+    },
+    {
+      "q": "Les données de collecte (téléphone, formulaires) arrivent chaque jour. Pourquoi automatiser le pipeline ?",
+      "options": [
+        "Pour supprimer le besoin de collecter",
+        "Pour appliquer chaque fois les mêmes contrôles, sans oubli, et gagner du temps",
+        "Pour ne plus jamais vérifier les résultats",
+        "Pour changer la langue des données"
+      ],
+      "answer": 1,
+      "expl": "L’automatisation rend le traitement régulier et reproductible. Les contrôles et les alertes restent indispensables."
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "module": "Transformers et Embeddings",
+  "public": "IT",
+  "seuil": 8,
+  "questions": [
+    {
+      "q": "Qu’est-ce qu’un embedding ?",
+      "options": [
+        "Une matrice creuse de comptages de mots",
+        "Un vecteur dense de nombres qui représente le sens d’un mot, d’une phrase ou d’un document",
+        "Une règle de nettoyage du texte",
+        "Un hash du document"
+      ],
+      "answer": 1,
+      "expl": "Contrairement au sac de mots (creux, très grand), un embedding est compact (quelques centaines de dimensions) et porte du sens."
+    },
+    {
+      "q": "Quelle mesure compare deux embeddings ?",
+      "options": [
+        "La distance de Levenshtein sur les chaînes",
+        "Le nombre de tokens communs",
+        "La taille du vocabulaire",
+        "La similarité cosinus (proximité de direction entre deux vecteurs)"
+      ],
+      "answer": 3,
+      "expl": "Avec des vecteurs normalisés, un simple produit scalaire donne cette similarité : plus elle est élevée, plus les sens sont proches."
+    },
+    {
+      "q": "En quoi un embedding diffère-t-il d’un sac de mots ?",
+      "options": [
+        "Il est plus grand et plus creux",
+        "Il ne fonctionne qu’en anglais",
+        "Il est compact (centaines de dimensions) et deux textes de sens proche ont des vecteurs proches",
+        "Il ignore le sens et ne garde que l’orthographe"
+      ],
+      "answer": 2,
+      "expl": "Le sac de mots a une colonne par mot du vocabulaire et aucun lien de sens entre elles."
+    },
+    {
+      "q": "Pourquoi les Transformers utilisent-ils des tokens de sous-mots ?",
+      "options": [
+        "Un mot inconnu est découpé en morceaux connus, au lieu d’être perdu",
+        "Pour compresser les fichiers",
+        "Parce que les mots entiers sont interdits",
+        "Pour supprimer les accents"
+      ],
+      "answer": 0,
+      "expl": "BPE ou WordPiece gardent un vocabulaire raisonnable tout en couvrant les mots rares, fautes et néologismes."
+    },
+    {
+      "q": "Quelle est la bonne séquence pour une recherche sémantique ?",
+      "options": [
+        "Encoder la requête seulement, puis chercher les mots exacts",
+        "Encoder les documents une fois, encoder la requête, comparer, garder les k plus proches",
+        "Réentraîner le modèle à chaque requête",
+        "Trier les documents par ordre alphabétique"
+      ],
+      "answer": 1,
+      "expl": "Les embeddings des documents se calculent à l’avance et se stockent : seule la requête est encodée à la volée."
+    },
+    {
+      "q": "Certains modèles (famille e5) demandent des préfixes « query: » et « passage: ». Pourquoi ?",
+      "options": [
+        "Pour chiffrer le texte",
+        "Pour accélérer l’affichage",
+        "Ils ont été entraînés avec ces préfixes : les omettre dégrade la qualité",
+        "C’est une simple convention d’affichage"
+      ],
+      "answer": 2,
+      "expl": "Il faut suivre la fiche du modèle : format d’entrée, normalisation, longueur maximale."
+    },
+    {
+      "q": "Que fait le mécanisme d’attention ?",
+      "options": [
+        "Il supprime les tokens rares",
+        "Il traduit chaque token indépendamment",
+        "Il trie les tokens par ordre alphabétique",
+        "Pour chaque token, il pondère les autres tokens de la phrase afin d’obtenir une représentation contextuelle"
+      ],
+      "answer": 3,
+      "expl": "Le même mot reçoit ainsi des représentations différentes selon le contexte (« avocat » du fruit ou du tribunal)."
+    },
+    {
+      "q": "Quel type de modèle choisir pour classer ou encoder des textes ?",
+      "options": [
+        "Un décodeur seul, uniquement pour générer",
+        "Un compresseur de fichiers",
+        "Un encodeur (famille BERT)",
+        "Un modèle d’images"
+      ],
+      "answer": 2,
+      "expl": "Les encodeurs produisent de bonnes représentations ; les décodeurs (famille GPT) sont conçus pour générer du texte."
+    },
+    {
+      "q": "Votre modèle accepte au maximum 512 tokens. Que se passe-t-il pour un long document ?",
+      "options": [
+        "Il est tronqué : il faut le découper en passages (chunks) avant l’encodage",
+        "Il est résumé automatiquement",
+        "Le modèle ralentit mais lit tout",
+        "Le modèle refuse de démarrer"
+      ],
+      "answer": 0,
+      "expl": "La troncature fait perdre silencieusement la fin du texte. C’est la raison d’être du découpage en passages."
+    },
+    {
+      "q": "Avant d’adopter un modèle multilingue pour une langue locale, que faut-il faire ?",
+      "options": [
+        "Lui faire confiance : « multilingue » signifie « toutes les langues »",
+        "Traduire d’abord tout votre corpus en anglais",
+        "Choisir le plus petit modèle",
+        "Vérifier la couverture de la langue et mesurer ses résultats sur vos propres données"
+      ],
+      "answer": 3,
+      "expl": "La couverture varie beaucoup d’une langue à l’autre : seule une évaluation sur vos textes tranche."
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "module": "Fondamentaux NLP",
+  "public": "IT",
+  "seuil": 8,
+  "questions": [
+    {
+      "q": "Que signifie « NLP », ou « TAL » en français ?",
+      "options": [
+        "Nouveau Langage de Programmation",
+        "Traitement Automatique des Langues",
+        "Transfert Automatique de Ligne",
+        "Traducteur Anglais-Local"
+      ],
+      "answer": 1,
+      "expl": "Le NLP (TAL) regroupe les techniques qui permettent à une machine de traiter du texte et de la parole."
+    },
+    {
+      "q": "Quelle opération rend identiques un « é » en un seul caractère et un « e » suivi d’un accent combinant ?",
+      "options": [
+        "str.lower()",
+        "str.strip()",
+        "re.sub(\"é\", \"e\", texte)",
+        "unicodedata.normalize(\"NFC\", texte)"
+      ],
+      "answer": 3,
+      "expl": "La normalisation Unicode (NFC) unifie les deux encodages. C’est capital pour les langues aux lettres spéciales (ɖ, ɛ, ɔ, ŋ…)."
+    },
+    {
+      "q": "Que produit un CountVectorizer ?",
+      "options": [
+        "Une matrice : une ligne par document, une colonne par mot du vocabulaire",
+        "Un modèle entraîné",
+        "Une liste de synonymes",
+        "Une traduction du texte"
+      ],
+      "answer": 0,
+      "expl": "Chaque case contient le nombre d’occurrences du mot dans le document : c’est le sac de mots."
+    },
+    {
+      "q": "TF-IDF donne un poids plus fort aux mots qui sont…",
+      "options": [
+        "Présents dans tous les documents",
+        "Les plus longs",
+        "Fréquents dans un document mais rares dans le corpus",
+        "Placés en début de phrase"
+      ],
+      "answer": 2,
+      "expl": "Un mot ciblé distingue mieux les documents qu’un mot omniprésent."
+    },
+    {
+      "q": "À quoi sert train_test_split ?",
+      "options": [
+        "À accélérer l’entraînement",
+        "À réserver des données jamais vues pour évaluer le modèle honnêtement",
+        "À séparer les mots d’une phrase",
+        "À équilibrer les catégories automatiquement"
+      ],
+      "answer": 1,
+      "expl": "Évaluer sur les données d’entraînement donnerait un résultat trompeur (fuite de données)."
+    },
+    {
+      "q": "Pour la catégorie « santé », le rappel (recall) mesure…",
+      "options": [
+        "La part des vrais messages « santé » que le modèle a retrouvés",
+        "La part des annonces « santé » qui sont justes",
+        "La vitesse de prédiction",
+        "Le nombre total de messages"
+      ],
+      "answer": 0,
+      "expl": "Le rappel évite les oublis ; la précision évite les fausses alertes."
+    },
+    {
+      "q": "Pourquoi des n-grammes de caractères (3 à 5 lettres) résistent-ils mieux aux fautes de frappe ?",
+      "options": [
+        "Ils corrigent l’orthographe",
+        "Ils ignorent les accents uniquement",
+        "Ils sont plus rapides",
+        "Un mot fautif partage encore la plupart de ses morceaux avec le mot correct"
+      ],
+      "answer": 3,
+      "expl": "« medecin » et « mdecin » ont beaucoup de morceaux en commun, contrairement à deux mots entiers différents."
+    },
+    {
+      "q": "Quelle limite majeure du sac de mots justifie le passage aux embeddings ?",
+      "options": [
+        "Il est trop lent",
+        "Il ne marche qu’en anglais",
+        "Il ignore l’ordre et le sens : « avocat » (fruit) et « avocat » (métier) se confondent",
+        "Il demande un GPU"
+      ],
+      "answer": 2,
+      "expl": "Les embeddings, vus au module 2, représentent le sens et le contexte des mots."
+    },
+    {
+      "q": "Un modèle obtient 99 % sur les données d’entraînement et 70 % sur le test. Que suspecter ?",
+      "options": [
+        "Un sous-apprentissage",
+        "Un surapprentissage : il a mémorisé les exemples au lieu de généraliser",
+        "Une bonne généralisation",
+        "Une erreur d’affichage"
+      ],
+      "answer": 1,
+      "expl": "Un grand écart entre entraînement et test signale que le modèle a « appris par cœur »."
+    },
+    {
+      "q": "Vous voulez envoyer des messages d’usagers vers une API externe. Quelle précaution est indispensable ?",
+      "options": [
+        "Aucune si l’API est gratuite",
+        "Les mettre en majuscules",
+        "Les compresser",
+        "Pseudonymiser ou anonymiser les données personnelles et vérifier le cadre légal"
+      ],
+      "answer": 3,
+      "expl": "Noms, numéros et informations de santé ne doivent pas quitter votre cadre sans protection."
+    }
+  ]
+}

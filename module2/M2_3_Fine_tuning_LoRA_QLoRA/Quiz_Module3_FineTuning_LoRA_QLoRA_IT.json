@@ -1,0 +1,117 @@
+{
+  "module": "Fine-tuning, LoRA et QLoRA",
+  "public": "IT",
+  "seuil": 8,
+  "questions": [
+    {
+      "q": "Quand le fine-tuning est-il le plus pertinent ?",
+      "options": [
+        "Pour injecter des connaissances qui changent chaque semaine",
+        "Quand on n’a aucun exemple",
+        "Pour une tâche spécialisée et répétitive (classification, extraction, format, ton) avec des centaines d’exemples de qualité",
+        "Pour remplacer toute évaluation"
+      ],
+      "answer": 2,
+      "expl": "Pour des connaissances qui évoluent, le RAG est plus adapté. Le fine-tuning façonne un comportement."
+    },
+    {
+      "q": "Quel est le principe de LoRA ?",
+      "options": [
+        "Geler les poids du modèle et entraîner de petites matrices de faible rang ajoutées à certaines couches",
+        "Réentraîner tous les poids avec un petit taux d’apprentissage",
+        "Supprimer les couches inutiles",
+        "Convertir le modèle en 4 bits"
+      ],
+      "answer": 0,
+      "expl": "Seule une petite fraction des paramètres (souvent moins de 1 %) est entraînée."
+    },
+    {
+      "q": "Que contrôle le paramètre « r » dans LoraConfig ?",
+      "options": [
+        "Le nombre d’époques",
+        "Le rang de l’adaptateur : plus il est grand, plus il y a de paramètres entraînables",
+        "La taille du lot (batch)",
+        "Le taux d’apprentissage"
+      ],
+      "answer": 1,
+      "expl": "Un rang de 8 ou 16 suffit souvent. Augmenter r donne plus de capacité, mais aussi plus de risque de surapprentissage et de coût."
+    },
+    {
+      "q": "Pourquoi un adaptateur LoRA est-il léger à stocker ?",
+      "options": [
+        "Il est compressé en 1 bit",
+        "Il ne contient aucune donnée",
+        "Il ne contient que les poids ajoutés (quelques Mo), pas le modèle de base",
+        "Il est stocké dans le cloud"
+      ],
+      "answer": 2,
+      "expl": "On partage l’adaptateur et on recharge le même modèle de base : plusieurs spécialisations coexistent facilement."
+    },
+    {
+      "q": "Qu’est-ce que QLoRA ?",
+      "options": [
+        "Un adaptateur sans modèle de base",
+        "Un modèle entraîné deux fois",
+        "Un format de fichier pour les données",
+        "Un modèle de base quantifié (en général 4 bits) et gelé, avec des adaptateurs LoRA entraînés en plus haute précision"
+      ],
+      "answer": 3,
+      "expl": "La quantification du modèle de base réduit fortement la mémoire, ce qui permet de fine-tuner de gros modèles sur un seul GPU modeste."
+    },
+    {
+      "q": "Quelle méthode demande le moins de mémoire GPU pour adapter un même gros modèle ?",
+      "options": [
+        "Le fine-tuning complet",
+        "LoRA en pleine précision",
+        "QLoRA",
+        "Le pré-entraînement from scratch"
+      ],
+      "answer": 2,
+      "expl": "Ordre de grandeur pour un modèle de 7 milliards de paramètres : plus de 100 Go en fine-tuning complet, quelques dizaines avec LoRA, une dizaine avec QLoRA."
+    },
+    {
+      "q": "La perte (loss) d’entraînement baisse mais celle de validation remonte. Que faire ?",
+      "options": [
+        "Suspecter un surapprentissage : arrêter plus tôt, réduire la capacité ou ajouter des données",
+        "Continuer l’entraînement, tout va bien",
+        "Augmenter encore le taux d’apprentissage",
+        "Supprimer le jeu de validation"
+      ],
+      "answer": 0,
+      "expl": "La validation mesure la généralisation. Elle sert justement à décider quand s’arrêter."
+    },
+    {
+      "q": "Qu’appelle-t-on « oubli catastrophique » ?",
+      "options": [
+        "La perte du fichier du modèle",
+        "L’oubli du mot de passe du compte",
+        "L’effacement des données d’entraînement",
+        "Le modèle perd des capacités générales après un fine-tuning trop agressif"
+      ],
+      "answer": 3,
+      "expl": "LoRA, un petit taux d’apprentissage et des exemples variés limitent ce risque."
+    },
+    {
+      "q": "Vous dédoublonnez votre corpus après l’avoir séparé en entraînement et test. Quel est le risque ?",
+      "options": [
+        "Aucun, l’ordre n’a pas d’importance",
+        "Des quasi-doublons se retrouvent des deux côtés : la note de test est gonflée",
+        "Le modèle ne converge plus",
+        "Le tokenizer plante"
+      ],
+      "answer": 1,
+      "expl": "On nettoie et dédoublonne d’abord, on sépare ensuite : c’est une forme de fuite de données."
+    },
+    {
+      "q": "Comment déployer un modèle fine-tuné avec LoRA sans dépendre de la bibliothèque peft ?",
+      "options": [
+        "Recopier les poids à la main",
+        "Réentraîner le modèle complet",
+        "Supprimer l’adaptateur",
+        "Fusionner l’adaptateur dans le modèle de base (merge_and_unload)"
+      ],
+      "answer": 3,
+      "expl": "La fusion produit un modèle classique : plus simple à servir, mais on perd la possibilité de changer d’adaptateur à chaud."
+    }
+  ]
+}

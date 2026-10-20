@@ -1,0 +1,117 @@
+{
+  "module": "Pipelines de données",
+  "public": "IT",
+  "seuil": 8,
+  "questions": [
+    {
+      "q": "Quelle est la différence entre ETL et ELT ?",
+      "options": [
+        "ETL s’applique aux images, ELT au texte",
+        "ELT ne transforme jamais les données",
+        "ETL transforme avant de charger ; ELT charge d’abord les données brutes, puis les transforme dans l’entrepôt",
+        "Il n’y a aucune différence"
+      ],
+      "answer": 2,
+      "expl": "ELT conserve les données brutes et profite de la puissance de l’entrepôt ; ETL convient quand il faut filtrer ou masquer avant le stockage."
+    },
+    {
+      "q": "Que signifie qu’une étape de pipeline est « idempotente » ?",
+      "options": [
+        "Elle s’exécute plus vite que les autres",
+        "Elle ne produit aucun journal",
+        "Elle ne fonctionne qu’une fois par jour",
+        "La rejouer plusieurs fois donne le même résultat, sans doublons ni effets secondaires"
+      ],
+      "answer": 3,
+      "expl": "Indispensable pour relancer sans risque après une panne."
+    },
+    {
+      "q": "Quel appel pandas convertit une colonne de dates en ignorant les valeurs invalides (NaT) ?",
+      "options": [
+        "col.astype(str)",
+        "col.dropna().sum()",
+        "pd.to_datetime(col, errors=\"coerce\", dayfirst=True)",
+        "pd.read_csv(col)"
+      ],
+      "answer": 2,
+      "expl": "errors=\"coerce\" transforme les valeurs illisibles en NaT, que l’on peut ensuite compter et signaler."
+    },
+    {
+      "q": "Quelles sont des dimensions classiques de qualité des données ?",
+      "options": [
+        "Complétude, exactitude, cohérence, unicité, fraîcheur",
+        "Vitesse, couleur, poids, volume, prix",
+        "Langue, police, taille, marge, titre",
+        "Chiffrement, compression, sauvegarde, réseau, câble"
+      ],
+      "answer": 0,
+      "expl": "Chaque dimension se mesure par des règles : taux de valeurs manquantes, doublons, valeurs hors plage, retard de mise à jour."
+    },
+    {
+      "q": "Quel est l’intérêt d’une règle de validation exécutée automatiquement à chaque lot ?",
+      "options": [
+        "Accélérer le téléchargement",
+        "Remplacer la collecte",
+        "Rendre les données secrètes",
+        "Détecter tôt les anomalies et empêcher qu’elles n’atteignent les rapports ou les modèles"
+      ],
+      "answer": 3,
+      "expl": "On bloque ou met en quarantaine un lot invalide, et on alerte la personne responsable."
+    },
+    {
+      "q": "Quelle différence entre pseudonymisation et anonymisation ?",
+      "options": [
+        "Aucune, ce sont deux noms pour la même chose",
+        "La pseudonymisation remplace l’identifiant mais reste réversible avec une clé ; l’anonymisation rend la ré-identification pratiquement impossible",
+        "La pseudonymisation supprime toutes les colonnes",
+        "L’anonymisation chiffre le fichier"
+      ],
+      "answer": 1,
+      "expl": "Une donnée pseudonymisée reste une donnée personnelle : elle demande encore protection et cadre légal."
+    },
+    {
+      "q": "Que vérifie un contrôle de k-anonymat avec k = 5 ?",
+      "options": [
+        "Que le fichier contient 5 colonnes",
+        "Que chaque personne apparaît 5 fois",
+        "Que le mot de passe a 5 caractères",
+        "Que chaque combinaison de quasi-identifiants (âge, localité, sexe…) concerne au moins 5 personnes"
+      ],
+      "answer": 3,
+      "expl": "Les petits groupes sont ré-identifiables : on généralise (année de naissance, région) ou on supprime."
+    },
+    {
+      "q": "Pourquoi versionner les jeux de données (empreinte, date, manifeste) ?",
+      "options": [
+        "Pour économiser du stockage",
+        "Pour éviter de documenter",
+        "Pour reproduire un résultat et savoir exactement sur quelles données un modèle ou un rapport a été produit",
+        "Pour changer les noms de colonnes"
+      ],
+      "answer": 2,
+      "expl": "Sans version, impossible d’expliquer pourquoi deux exécutions donnent des résultats différents."
+    },
+    {
+      "q": "Un lot reçoit des données mal formées. Quelle stratégie est la plus saine ?",
+      "options": [
+        "Mettre les lignes en quarantaine avec le motif, poursuivre avec les lignes valides, alerter",
+        "Supprimer silencieusement les lignes",
+        "Arrêter définitivement le pipeline",
+        "Corriger au hasard pour que tout passe"
+      ],
+      "answer": 0,
+      "expl": "On garde la trace de ce qui est rejeté : cela guide la correction à la source."
+    },
+    {
+      "q": "Quel élément est le plus important pour opérer un pipeline en production ?",
+      "options": [
+        "Un logo sur le tableau de bord",
+        "Journalisation, alertes, métriques de qualité et reprise après incident",
+        "Un gros écran dans la salle",
+        "Des noms de colonnes courts"
+      ],
+      "answer": 1,
+      "expl": "Un pipeline qui échoue sans prévenir ou qui dégrade lentement la qualité est pire qu’un pipeline qui s’arrête avec une alerte."
+    }
+  ]
+}

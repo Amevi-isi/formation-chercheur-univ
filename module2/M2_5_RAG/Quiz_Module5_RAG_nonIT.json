@@ -1,0 +1,117 @@
+{
+  "module": "RAG",
+  "public": "non-IT",
+  "seuil": 8,
+  "questions": [
+    {
+      "q": "Que signifie « RAG » ?",
+      "options": [
+        "Reconnaître automatiquement des graphiques",
+        "Générer une réponse en s’appuyant sur des documents retrouvés au préalable",
+        "Réentraîner entièrement un modèle de langue",
+        "Répertorier et archiver des gros fichiers"
+      ],
+      "answer": 1,
+      "expl": "RAG = génération augmentée par la recherche : on cherche d’abord dans vos documents, puis on rédige à partir de ce qu’on a trouvé."
+    },
+    {
+      "q": "Quelle analogie décrit le mieux un système RAG ?",
+      "options": [
+        "Un élève qui récite par cœur tout ce qu’il a appris",
+        "Un traducteur qui change la langue d’un texte",
+        "Un coffre-fort qui protège des documents",
+        "Un bibliothécaire qui va chercher les bons livres, puis rédige sa réponse en les citant"
+      ],
+      "answer": 3,
+      "expl": "Le modèle ne répond pas de mémoire : il consulte vos documents, ce qui réduit les inventions."
+    },
+    {
+      "q": "Pourquoi ne pas simplement coller tous nos documents dans la question ?",
+      "options": [
+        "Parce que les documents sont secrets",
+        "Parce que le modèle refuse les fichiers",
+        "Le modèle ne peut lire qu’une quantité limitée de texte à la fois, et trop de texte noie l’information utile",
+        "Parce que cela coûte moins cher"
+      ],
+      "answer": 2,
+      "expl": "On sélectionne les quelques passages utiles : c’est le rôle de la recherche."
+    },
+    {
+      "q": "Pourquoi découpe-t-on les documents en morceaux ?",
+      "options": [
+        "Pour retrouver précisément le passage qui répond à la question",
+        "Pour réduire la taille des fichiers",
+        "Pour les rendre illisibles par des tiers",
+        "Pour changer leur langue"
+      ],
+      "answer": 0,
+      "expl": "Un morceau trop long mélange plusieurs sujets ; un morceau trop court perd le contexte."
+    },
+    {
+      "q": "Un morceau coupe une phrase en plein milieu : « Les enfants de moins de 5 ans… ». Quel est le risque ?",
+      "options": [
+        "Aucun risque",
+        "Le passage perd son sens et peut mal répondre à la question",
+        "Le document devient confidentiel",
+        "Le modèle change de langue"
+      ],
+      "answer": 1,
+      "expl": "On découpe aux limites naturelles (paragraphes, titres) et on garde un chevauchement pour ne pas perdre le contexte."
+    },
+    {
+      "q": "Que signifie « citer ses sources » dans un système RAG ?",
+      "options": [
+        "Mettre le nom de la machine en bas de page",
+        "Copier toute la base de documents",
+        "Indiquer de quel document et de quel passage vient chaque information de la réponse",
+        "Traduire les documents"
+      ],
+      "answer": 2,
+      "expl": "Les sources permettent de vérifier la réponse, ce qui est essentiel pour un usage sérieux."
+    },
+    {
+      "q": "La question posée n’est traitée dans aucun document. Que doit répondre un bon système ?",
+      "options": [
+        "Une réponse plausible, pour ne pas décevoir",
+        "La réponse la plus longue possible",
+        "Une réponse tirée au hasard",
+        "Qu’il n’a pas trouvé l’information dans les documents, plutôt qu’inventer"
+      ],
+      "answer": 3,
+      "expl": "Savoir dire « je ne sais pas » est une qualité : c’est ce qui rend l’outil digne de confiance."
+    },
+    {
+      "q": "Deux documents se contredisent : l’un date de 2019, l’autre de 2025. Que faire ?",
+      "options": [
+        "Garder les deux sans rien indiquer",
+        "Laisser le modèle choisir au hasard",
+        "Maintenir les documents à jour et indiquer la date et la version de chaque source",
+        "Supprimer le plus récent"
+      ],
+      "answer": 2,
+      "expl": "Un RAG n’est aussi bon que sa base documentaire : la mise à jour et la traçabilité sont à organiser."
+    },
+    {
+      "q": "Un RAG peut-il se tromper ?",
+      "options": [
+        "Oui : mauvais passage retrouvé, document périmé ou erreur de rédaction",
+        "Non, jamais, puisqu’il cite des sources",
+        "Seulement s’il est en panne",
+        "Seulement en anglais"
+      ],
+      "answer": 0,
+      "expl": "Les sources aident à vérifier, mais ne dispensent pas de contrôler les réponses importantes."
+    },
+    {
+      "q": "Avant de mettre des documents internes dans un système RAG, que faut-il décider ?",
+      "options": [
+        "Rien, tous les documents peuvent être mélangés",
+        "La couleur de l’interface",
+        "Le nombre de mots par page",
+        "Qui a le droit de lire quoi, et où les documents sont hébergés"
+      ],
+      "answer": 3,
+      "expl": "Le RAG ne doit pas faire apparaître à quelqu’un un document auquel il n’a pas droit : confidentialité, droits d’accès et hébergement comptent."
+    }
+  ]
+}

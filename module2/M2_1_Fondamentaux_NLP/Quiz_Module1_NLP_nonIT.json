@@ -1,0 +1,117 @@
+{
+  "module": "Fondamentaux NLP",
+  "public": "non-IT",
+  "seuil": 8,
+  "questions": [
+    {
+      "q": "Que signifie « NLP », ou « TAL » en français ?",
+      "options": [
+        "Nouveau Langage de Programmation",
+        "Traitement Automatique des Langues",
+        "Transfert Automatique de Ligne",
+        "Traducteur Anglais-Local"
+      ],
+      "answer": 1,
+      "expl": "Le NLP (TAL) regroupe les techniques qui permettent à une machine de traiter du texte et de la parole."
+    },
+    {
+      "q": "Qu’appelle-t-on « tokenisation » ?",
+      "options": [
+        "Chiffrer un texte pour le protéger",
+        "Traduire un texte dans une autre langue",
+        "Supprimer les fautes d’orthographe",
+        "Découper un texte en petits morceaux (mots ou parties de mots)"
+      ],
+      "answer": 3,
+      "expl": "La machine ne lit pas une phrase d’un bloc : elle la découpe en morceaux qu’elle peut comparer et compter."
+    },
+    {
+      "q": "Pourquoi nettoie-t-on un texte (minuscules, accents, ponctuation) avant de l’analyser ?",
+      "options": [
+        "Pour que des variantes sans importance ne soient pas prises pour des mots différents",
+        "Pour que le texte soit plus joli",
+        "Pour réduire la taille du fichier uniquement",
+        "Pour cacher les données personnelles"
+      ],
+      "answer": 0,
+      "expl": "« MEDECIN », « médecin » et « Médecin » désignent le même mot : le nettoyage évite que la machine les sépare."
+    },
+    {
+      "q": "Dans la méthode du « sac de mots », que conserve-t-on d’un message ?",
+      "options": [
+        "L’ordre exact des mots et le ton employé",
+        "Seulement le premier et le dernier mot",
+        "Les mots présents et le nombre de fois où ils apparaissent",
+        "Le sens profond de la phrase"
+      ],
+      "answer": 2,
+      "expl": "Le sac de mots compte les mots, mais oublie leur ordre : c’est simple et efficace, mais limité."
+    },
+    {
+      "q": "Le mot « enfant » apparaît dans presque tous les messages. Pour trier par sujet, ce mot est…",
+      "options": [
+        "Très utile, car il est fréquent",
+        "Peu utile, car il ne distingue pas les catégories entre elles",
+        "Obligatoire pour le tri",
+        "Dangereux et à signaler"
+      ],
+      "answer": 1,
+      "expl": "Un mot présent partout n’aide pas à distinguer ; un mot rare et ciblé (comme « vaccin ») est un meilleur indice."
+    },
+    {
+      "q": "Pourquoi teste-t-on le modèle sur des messages qu’il n’a jamais vus ?",
+      "options": [
+        "Pour mesurer honnêtement sa qualité, comme un examen avec de nouvelles questions",
+        "Pour l’entraîner plus longtemps",
+        "Pour gagner de la place mémoire",
+        "Parce que c’est moins cher"
+      ],
+      "answer": 0,
+      "expl": "Un élève qui récite ses exercices n’est pas forcément prêt pour l’examen : le test doit porter sur des cas nouveaux."
+    },
+    {
+      "q": "Un modèle classe en « santé » un message qui parle d’école. Comment appelle-t-on cette erreur ?",
+      "options": [
+        "Un oubli",
+        "Une bonne réponse",
+        "Une réponse « je ne sais pas »",
+        "Une fausse alerte"
+      ],
+      "answer": 3,
+      "expl": "Il a « sonné l’alarme » pour rien, comme un détecteur de fumée qui se déclenche sans incendie."
+    },
+    {
+      "q": "Un message parle à la fois de santé et d’école. Quelle est la bonne pratique ?",
+      "options": [
+        "Laisser la machine trancher au hasard",
+        "Supprimer le message",
+        "Prévoir une catégorie « à vérifier » traitée par un humain",
+        "Choisir toujours la première catégorie"
+      ],
+      "answer": 2,
+      "expl": "Les cas ambigus doivent être renvoyés à une personne : la machine ne comprend pas, elle compte des indices."
+    },
+    {
+      "q": "Un système de tri atteint 90 % de bonnes réponses. Peut-on dire qu’il « comprend » les messages ?",
+      "options": [
+        "Oui, il comprend comme un humain",
+        "Non, il repère des indices dans les mots sans comprendre le sens",
+        "Oui, mais seulement en français",
+        "Non, car 90 % est trop bas"
+      ],
+      "answer": 1,
+      "expl": "Une bonne performance ne prouve pas la compréhension : elle montre que les indices statistiques fonctionnent sur ce type de messages."
+    },
+    {
+      "q": "Avant d’utiliser de vrais messages d’usagers pour entraîner un modèle, que faut-il faire ?",
+      "options": [
+        "Rien : ce sont des textes comme les autres",
+        "Les publier pour demander l’avis du public",
+        "Les envoyer à n’importe quel service gratuit en ligne",
+        "Les protéger : accord, cadre légal et anonymisation des données personnelles"
+      ],
+      "answer": 3,
+      "expl": "Les messages contiennent souvent des données personnelles ou de santé : leur usage exige un cadre et une protection."
+    }
+  ]
+}

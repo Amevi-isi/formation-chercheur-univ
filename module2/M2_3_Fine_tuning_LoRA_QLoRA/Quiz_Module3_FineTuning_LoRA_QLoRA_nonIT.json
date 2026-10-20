@@ -1,0 +1,117 @@
+{
+  "module": "Fine-tuning, LoRA et QLoRA",
+  "public": "non-IT",
+  "seuil": 8,
+  "questions": [
+    {
+      "q": "Que signifie « fine-tuner » un modèle ?",
+      "options": [
+        "Le spécialiser en poursuivant son apprentissage avec nos propres exemples",
+        "Réparer un modèle en panne",
+        "Traduire le modèle dans une autre langue",
+        "Copier le modèle sur un autre ordinateur"
+      ],
+      "answer": 0,
+      "expl": "Comme un médecin généraliste qui se forme à la pédiatrie : il garde sa culture et acquiert une spécialité."
+    },
+    {
+      "q": "Un assistant doit répondre à partir de nos documents, qui changent souvent. Quelle approche est en général la plus adaptée ?",
+      "options": [
+        "Le réentraîner à chaque changement",
+        "Lui faire apprendre tous les documents par cœur",
+        "Lui poser les questions en anglais",
+        "Lui donner accès aux documents (recherche augmentée, RAG)"
+      ],
+      "answer": 3,
+      "expl": "Réentraîner est long et coûteux : donner accès à la documentation permet de rester à jour. On y reviendra au module 5."
+    },
+    {
+      "q": "Qu’est-ce qu’un « exemple d’entraînement » ?",
+      "options": [
+        "Un texte pris au hasard sur internet",
+        "Une entrée accompagnée de la réponse attendue",
+        "Un message sans réponse",
+        "Une règle de grammaire"
+      ],
+      "answer": 1,
+      "expl": "Le modèle apprend en voyant beaucoup de paires « entrée → réponse attendue »."
+    },
+    {
+      "q": "Qu’est-ce qui compte le plus pour réussir un fine-tuning ?",
+      "options": [
+        "Le plus grand nombre d’exemples possible, même mauvais",
+        "Des exemples tous identiques",
+        "Des exemples tirés d’une seule personne",
+        "Des exemples corrects, cohérents et représentatifs : la qualité avant la quantité"
+      ],
+      "answer": 3,
+      "expl": "Un modèle apprend ce qu’on lui montre : des exemples faux ou contradictoires produisent un modèle peu fiable."
+    },
+    {
+      "q": "Que fait LoRA, en une phrase ?",
+      "options": [
+        "Il efface le modèle de base et le remplace",
+        "Il traduit automatiquement les exemples",
+        "Il garde le modèle de base figé et entraîne un petit « adaptateur » qui s’y ajoute",
+        "Il vérifie l’orthographe des données"
+      ],
+      "answer": 2,
+      "expl": "Comme un petit cahier d’annotations glissé dans un gros manuel : on n’a pas à réécrire le manuel."
+    },
+    {
+      "q": "QLoRA ajoute à LoRA…",
+      "options": [
+        "Une compression du modèle de base, pour réduire fortement la mémoire nécessaire",
+        "Un correcteur d’orthographe",
+        "Un second modèle plus grand",
+        "Une traduction en plusieurs langues"
+      ],
+      "answer": 0,
+      "expl": "C’est un « livre au format poche » : moins de place, donc possible sur un ordinateur ou un GPU plus modeste."
+    },
+    {
+      "q": "Pourquoi LoRA intéresse-t-il particulièrement une petite équipe ?",
+      "options": [
+        "Il supprime le besoin de données",
+        "Il coûte beaucoup moins en calcul et en mémoire, et les adaptateurs sont légers à partager",
+        "Il garantit zéro erreur",
+        "Il fonctionne sans aucun ordinateur"
+      ],
+      "answer": 1,
+      "expl": "On peut même avoir un adaptateur par service ou par langue, sur le même modèle de base."
+    },
+    {
+      "q": "Qu’appelle-t-on « surapprentissage » ?",
+      "options": [
+        "Le modèle apprend trop vite",
+        "Le modèle refuse d’apprendre",
+        "Le modèle apprend ses exemples par cœur et se débrouille mal sur du nouveau",
+        "Le modèle devient plus petit"
+      ],
+      "answer": 2,
+      "expl": "C’est l’élève qui récite ses exercices sans avoir compris : il échoue à l’examen."
+    },
+    {
+      "q": "Quelles données ne faut-il pas utiliser telles quelles pour entraîner ?",
+      "options": [
+        "Des exemples inventés pour la formation",
+        "Des textes publics dont la licence autorise l’usage",
+        "Des exemples sans aucune donnée personnelle",
+        "Des messages d’usagers contenant des noms et des informations de santé non protégés"
+      ],
+      "answer": 3,
+      "expl": "Un modèle peut mémoriser des informations et les restituer : il faut anonymiser, et disposer d’un cadre légal."
+    },
+    {
+      "q": "Comment vérifier honnêtement qu’un fine-tuning a amélioré le modèle ?",
+      "options": [
+        "Demander au modèle s’il est meilleur",
+        "Regarder le nombre d’exemples utilisés",
+        "Comparer avant et après sur un jeu de test jamais utilisé à l’entraînement",
+        "Mesurer la taille du fichier"
+      ],
+      "answer": 2,
+      "expl": "Comme un examen : il faut des questions que l’élève n’a jamais vues."
+    }
+  ]
+}

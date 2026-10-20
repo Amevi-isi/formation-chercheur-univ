@@ -1,0 +1,117 @@
+{
+  "module": "Transformers et Embeddings",
+  "public": "non-IT",
+  "seuil": 8,
+  "questions": [
+    {
+      "q": "Qu’est-ce qu’un « embedding » ?",
+      "options": [
+        "Un nouveau format de fichier pour stocker des textes",
+        "Un dictionnaire de traduction",
+        "Une suite de nombres qui place un mot ou une phrase sur une « carte du sens »",
+        "Un correcteur d’orthographe"
+      ],
+      "answer": 2,
+      "expl": "Chaque mot ou phrase reçoit une « adresse » (des nombres) : deux textes de sens proche ont des adresses proches."
+    },
+    {
+      "q": "Sur la carte des mots, « médecin » et « docteur » sont…",
+      "options": [
+        "Proches l’un de l’autre",
+        "Très éloignés, car ils ne s’écrivent pas pareil",
+        "Au même endroit que « passeport »",
+        "Absents de la carte"
+      ],
+      "answer": 0,
+      "expl": "La carte regroupe les mots de sens voisin, même s’ils s’écrivent différemment. C’est ce que le sac de mots ne savait pas faire."
+    },
+    {
+      "q": "Que permet une recherche « par le sens » ?",
+      "options": [
+        "Retrouver uniquement les textes qui contiennent exactement les mêmes mots",
+        "Corriger les fautes de l’utilisateur",
+        "Traduire la question en anglais",
+        "Retrouver « Calendrier vaccinal des nourrissons » à partir de « Où faire vacciner mon bébé ? »"
+      ],
+      "answer": 3,
+      "expl": "Les mots diffèrent, mais le sens est voisin : les deux textes ont des adresses proches sur la carte."
+    },
+    {
+      "q": "Pourquoi le sac de mots confond-il « avocat » (le fruit) et « avocat » (le métier) ?",
+      "options": [
+        "Parce qu’il ne connaît pas le français",
+        "Il compte les mots sans tenir compte du contexte",
+        "Parce que le mot est trop long",
+        "Parce qu’il corrige automatiquement les mots"
+      ],
+      "answer": 1,
+      "expl": "Le contexte (« plaider », « salade »…) fait la différence : c’est précisément ce que l’attention apporte."
+    },
+    {
+      "q": "À quoi sert l’« attention » dans un Transformer ?",
+      "options": [
+        "À attirer l’attention de l’utilisateur",
+        "À supprimer les mots inutiles",
+        "À accélérer l’impression des documents",
+        "À laisser chaque mot regarder les autres mots de la phrase pour préciser son sens"
+      ],
+      "answer": 3,
+      "expl": "Dans « elle était inquiète », l’attention relie « elle » à la bonne personne de la phrase."
+    },
+    {
+      "q": "Un modèle de type « lecteur » (encodeur) sert surtout à…",
+      "options": [
+        "Rédiger de longs textes originaux",
+        "Imprimer des documents",
+        "Comprendre et classer des textes, ou les transformer en adresses",
+        "Stocker des mots de passe"
+      ],
+      "answer": 2,
+      "expl": "Les lecteurs (BERT et cousins) excellent pour classer, rechercher, repérer des informations."
+    },
+    {
+      "q": "Un assistant qui rédige des textes (modèle « écrivain ») peut parfois…",
+      "options": [
+        "Inventer une information fausse avec beaucoup d’aplomb",
+        "Refuser de répondre à toute question",
+        "Se tromper uniquement en anglais",
+        "Corriger automatiquement ses propres erreurs"
+      ],
+      "answer": 0,
+      "expl": "On appelle cela une « hallucination » : le texte est fluide, mais le contenu peut être faux. Il faut vérifier."
+    },
+    {
+      "q": "Qu’est-ce qu’un modèle « pré-entraîné » ?",
+      "options": [
+        "Un modèle qui n’a encore rien appris",
+        "Un modèle qui a déjà lu une énorme quantité de textes avant d’être adapté à une tâche",
+        "Un modèle réservé aux images",
+        "Un modèle qui ne peut plus être modifié"
+      ],
+      "answer": 1,
+      "expl": "Comme un élève qui a lu toute la bibliothèque avant d’apprendre un métier précis."
+    },
+    {
+      "q": "Pourquoi un modèle généraliste fonctionne-t-il parfois mal dans une langue togolaise ?",
+      "options": [
+        "Parce que les langues togolaises sont trop difficiles",
+        "Parce qu’il ne reconnaît que les majuscules",
+        "Il a vu très peu de textes dans cette langue pendant son apprentissage",
+        "Parce qu’il est trop récent"
+      ],
+      "answer": 2,
+      "expl": "Peu de textes écrits disponibles = peu d’exemples vus = résultats moins fiables. C’est un enjeu de données."
+    },
+    {
+      "q": "Avant de coller le dossier d’un patient dans un assistant en ligne public, que faut-il faire ?",
+      "options": [
+        "Rien, c’est sans danger",
+        "Le traduire en anglais d’abord",
+        "Le mettre en majuscules",
+        "Ne pas le faire sans cadre et autorisation : protéger ou anonymiser les données"
+      ],
+      "answer": 3,
+      "expl": "Ce que vous collez peut quitter votre cadre de protection. Les données personnelles et de santé exigent des règles claires."
+    }
+  ]
+}

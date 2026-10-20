@@ -1,0 +1,117 @@
+{
+  "module": "NER clinique et OCR",
+  "public": "non-IT",
+  "seuil": 8,
+  "questions": [
+    {
+      "q": "Que fait la reconnaissance d’entités (NER) ?",
+      "options": [
+        "Elle traduit le texte dans une autre langue",
+        "Elle corrige l’orthographe du dossier",
+        "Elle chiffre le texte pour le protéger",
+        "Elle repère et étiquette dans un texte les informations importantes : maladies, médicaments, dates…"
+      ],
+      "answer": 3,
+      "expl": "C’est un « surligneur intelligent » : chaque information repérée reçoit une étiquette (problème, médicament, dose, date)."
+    },
+    {
+      "q": "Dans « paracétamol 500 mg », quelles étiquettes un NER clinique attribue-t-il ?",
+      "options": [
+        "Problème pour les deux",
+        "Médicament pour « paracétamol », dose pour « 500 mg »",
+        "Date pour « 500 mg »",
+        "Aucune étiquette"
+      ],
+      "answer": 1,
+      "expl": "Une même phrase contient plusieurs types d’informations, chacun avec son étiquette."
+    },
+    {
+      "q": "Pourquoi « pas de fièvre » est-il un piège pour une machine ?",
+      "options": [
+        "Parce que « fièvre » est un mot rare",
+        "Parce que la phrase est trop courte",
+        "Parce que la machine ne connaît pas les accents",
+        "Un système naïf repère « fièvre » et croit que le patient en a"
+      ],
+      "answer": 3,
+      "expl": "La négation change tout : le mot est présent, mais le problème est absent."
+    },
+    {
+      "q": "Dans « antécédent familial de diabète (mère) », qui a le diabète ?",
+      "options": [
+        "Le patient",
+        "Les deux",
+        "La mère du patient, pas le patient lui-même",
+        "Personne"
+      ],
+      "answer": 2,
+      "expl": "Il faut identifier à qui s’applique l’information, pas seulement la repérer."
+    },
+    {
+      "q": "À quoi sert un guide d’annotation ?",
+      "options": [
+        "À ce que plusieurs personnes étiquettent les exemples de la même façon",
+        "À programmer la machine",
+        "À traduire les dossiers",
+        "À stocker les dossiers"
+      ],
+      "answer": 0,
+      "expl": "Sans règles communes, deux annotateurs étiquettent différemment : le modèle apprend le désordre."
+    },
+    {
+      "q": "Que fait l’OCR ?",
+      "options": [
+        "Il traduit un document",
+        "Il transforme une image de texte (scan, photo) en texte numérique",
+        "Il résume un dossier",
+        "Il chiffre les données"
+      ],
+      "answer": 1,
+      "expl": "L’OCR « lit » une image comme un dactylographe qui recopierait la page."
+    },
+    {
+      "q": "Qu’est-ce qui dégrade le plus la lecture d’un document par l’OCR ?",
+      "options": [
+        "Un papier de couleur blanche",
+        "Un texte imprimé en gras",
+        "Une photo de biais, mal éclairée ou floue",
+        "Un document de petite taille"
+      ],
+      "answer": 2,
+      "expl": "Une bonne photo (à plat, bien éclairée, nette) est la première condition d’un bon résultat."
+    },
+    {
+      "q": "L’OCR lit « 5OO mg » avec la lettre O au lieu du chiffre zéro. Pourquoi est-ce grave ?",
+      "options": [
+        "Ce n’est pas grave, c’est joli",
+        "Cela ne change rien pour la machine",
+        "Cela rend le texte plus court",
+        "Une dose peut être mal comprise : les chiffres exigent une vérification"
+      ],
+      "answer": 3,
+      "expl": "Dans un dossier médical, une erreur sur un chiffre peut avoir des conséquences : on relit toujours les doses."
+    },
+    {
+      "q": "Après l’OCR et le NER d’un dossier, que faut-il faire des doses et des dates extraites ?",
+      "options": [
+        "Les considérer comme exactes",
+        "Les supprimer",
+        "Les faire vérifier par une personne avant de les utiliser",
+        "Les traduire"
+      ],
+      "answer": 2,
+      "expl": "La machine aide, mais l’humain reste responsable des informations de santé."
+    },
+    {
+      "q": "Avant de traiter automatiquement des dossiers de santé, que faut-il prévoir ?",
+      "options": [
+        "Un cadre légal, l’anonymisation et un hébergement sécurisé",
+        "Rien de particulier",
+        "Un envoi vers n’importe quel service en ligne gratuit",
+        "Une copie sur un téléphone personnel"
+      ],
+      "answer": 0,
+      "expl": "Les données de santé sont parmi les plus sensibles : leur protection est une condition préalable."
+    }
+  ]
+}
