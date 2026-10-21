@@ -1,0 +1,22 @@
+Objet : Jour 4 – IA générative appliquée à la recherche : à préparer avant la séance
+
+Bonjour à toutes,
+
+Le Jour 4 (IA générative appliquée à la recherche) se fera sur VOTRE thèse : votre résumé, votre bibliographie, votre sujet. Pour en profiter pleinement, merci de préparer avant la séance :
+
+1. Un ordinateur portable chargé.
+
+2. Vos comptes, créés à l'avance :
+   - un compte Google (pour Gemini et Gemini Notebook, ex-NotebookLM) ;
+   - un compte gratuit sur Claude (claude.ai) et sur Grok (grok.com) ;
+   - si possible, un compte gratuit sur Semantic Scholar (semanticscholar.org).
+
+3. 5 à 10 articles de votre bibliographie de thèse, en PDF, en libre accès, déjà téléchargés sur votre ordinateur.
+
+4. Le résumé de votre thèse (ou de votre projet de thèse) et un paragraphe de votre état de l'art, en Word ou Google Docs.
+
+Important : n'apportez pas de données sensibles (entretiens ou données de patients non anonymisés, chapitres inédits). Si vous n'avez pas ces documents, ce n'est pas grave : des corpus de travail seront fournis sur place.
+
+À très bientôt !
+
+Ditoma KEGDIGOMA
