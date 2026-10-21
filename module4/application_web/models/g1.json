@@ -1,0 +1,298 @@
+{
+  "id": "g1",
+  "title": "Territoire et accès aux soins",
+  "question": "Quelle probabilité de manque de soins le modèle associe-t-il à un profil complet ?",
+  "method": "Forêt aléatoire utilisant les 17 variables effectivement retenues dans le notebook.",
+  "metrics": {
+    "Exactitude sur le jeu test": 0.6739,
+    "Rappel — manque de soins": 0.8421
+  },
+  "regions": [
+    "Centrale",
+    "Kara",
+    "Lomé Commune",
+    "Maritime",
+    "Plateaux",
+    "Savane"
+  ],
+  "milieux": [
+    "rural",
+    "urbain"
+  ],
+  "summaries": [
+    {
+      "region": "Centrale",
+      "milieu": "rural",
+      "n": 87,
+      "observed_rate": 0.6092,
+      "model_rate": 0.641
+    },
+    {
+      "region": "Centrale",
+      "milieu": "urbain",
+      "n": 30,
+      "observed_rate": 0.4333,
+      "model_rate": 0.4494
+    },
+    {
+      "region": "Kara",
+      "milieu": "rural",
+      "n": 94,
+      "observed_rate": 0.7447,
+      "model_rate": 0.7188
+    },
+    {
+      "region": "Kara",
+      "milieu": "urbain",
+      "n": 29,
+      "observed_rate": 0.6897,
+      "model_rate": 0.6211
+    },
+    {
+      "region": "Lomé Commune",
+      "milieu": "urbain",
+      "n": 317,
+      "observed_rate": 0.4259,
+      "model_rate": 0.4514
+    },
+    {
+      "region": "Maritime",
+      "milieu": "rural",
+      "n": 168,
+      "observed_rate": 0.6964,
+      "model_rate": 0.6634
+    },
+    {
+      "region": "Maritime",
+      "milieu": "urbain",
+      "n": 32,
+      "observed_rate": 0.625,
+      "model_rate": 0.5163
+    },
+    {
+      "region": "Plateaux",
+      "milieu": "rural",
+      "n": 173,
+      "observed_rate": 0.6879,
+      "model_rate": 0.6916
+    },
+    {
+      "region": "Plateaux",
+      "milieu": "urbain",
+      "n": 54,
+      "observed_rate": 0.537,
+      "model_rate": 0.5101
+    },
+    {
+      "region": "Savane",
+      "milieu": "rural",
+      "n": 72,
+      "observed_rate": 0.6944,
+      "model_rate": 0.7106
+    },
+    {
+      "region": "Savane",
+      "milieu": "urbain",
+      "n": 16,
+      "observed_rate": 0.4375,
+      "model_rate": 0.5115
+    }
+  ],
+  "fields": [
+    {
+      "name": "urbain",
+      "label": "Milieu de résidence",
+      "type": "choice",
+      "default": 0,
+      "min": 0,
+      "max": 1,
+      "step": "any",
+      "options": [
+        {
+          "value": 0,
+          "label": "Rural"
+        },
+        {
+          "value": 1,
+          "label": "Urbain"
+        }
+      ]
+    },
+    {
+      "name": "age",
+      "label": "Âge",
+      "type": "number",
+      "default": 32.0,
+      "min": 18.0,
+      "max": 72.58,
+      "step": "any"
+    },
+    {
+      "name": "femme",
+      "label": "Sexe",
+      "type": "choice",
+      "default": 0,
+      "min": 0,
+      "max": 1,
+      "step": "any",
+      "options": [
+        {
+          "value": 0,
+          "label": "Homme"
+        },
+        {
+          "value": 1,
+          "label": "Femme"
+        }
+      ]
+    },
+    {
+      "name": "niveau_instruction",
+      "label": "Niveau d’instruction (0 à 9)",
+      "type": "number",
+      "default": 4.0,
+      "min": 0.0,
+      "max": 8.0,
+      "step": "any"
+    },
+    {
+      "name": "electricite_zone",
+      "label": "Électricité présente dans la zone",
+      "type": "boolean",
+      "default": 1,
+      "min": 0,
+      "max": 1,
+      "step": "any"
+    },
+    {
+      "name": "eau_courante_zone",
+      "label": "Eau courante présente dans la zone",
+      "type": "boolean",
+      "default": 0,
+      "min": 0,
+      "max": 1,
+      "step": "any"
+    },
+    {
+      "name": "egouts_zone",
+      "label": "Égouts présents dans la zone",
+      "type": "boolean",
+      "default": 0,
+      "min": 0,
+      "max": 1,
+      "step": "any"
+    },
+    {
+      "name": "forage_zone",
+      "label": "Forage présent dans la zone",
+      "type": "boolean",
+      "default": 1,
+      "min": 0,
+      "max": 1,
+      "step": "any"
+    },
+    {
+      "name": "ecole_zone",
+      "label": "École présente dans la zone",
+      "type": "boolean",
+      "default": 1,
+      "min": 0,
+      "max": 1,
+      "step": "any"
+    },
+    {
+      "name": "centre_sante_zone",
+      "label": "Centre de santé présent dans la zone",
+      "type": "boolean",
+      "default": 1,
+      "min": 0,
+      "max": 1,
+      "step": "any"
+    },
+    {
+      "name": "marche_zone",
+      "label": "Marché présent dans la zone",
+      "type": "boolean",
+      "default": 1,
+      "min": 0,
+      "max": 1,
+      "step": "any"
+    },
+    {
+      "name": "banque_zone",
+      "label": "Banque présente dans la zone",
+      "type": "boolean",
+      "default": 1,
+      "min": 0,
+      "max": 1,
+      "step": "any"
+    },
+    {
+      "name": "transport_zone",
+      "label": "Transport disponible dans la zone",
+      "type": "boolean",
+      "default": 1,
+      "min": 0,
+      "max": 1,
+      "step": "any"
+    },
+    {
+      "name": "menage_radio",
+      "label": "Radio dans le ménage",
+      "type": "boolean",
+      "default": 1,
+      "min": 0,
+      "max": 1,
+      "step": "any"
+    },
+    {
+      "name": "menage_television",
+      "label": "Télévision dans le ménage",
+      "type": "boolean",
+      "default": 1,
+      "min": 0,
+      "max": 1,
+      "step": "any"
+    },
+    {
+      "name": "menage_ordinateur",
+      "label": "Ordinateur dans le ménage",
+      "type": "boolean",
+      "default": 0,
+      "min": 0,
+      "max": 1,
+      "step": "any"
+    },
+    {
+      "name": "menage_compte_bancaire",
+      "label": "Compte bancaire dans le ménage",
+      "type": "boolean",
+      "default": 0,
+      "min": 0,
+      "max": 1,
+      "step": "any"
+    }
+  ],
+  "example": {
+    "urbain": 0.0,
+    "age": 32.0,
+    "femme": 0.5,
+    "niveau_instruction": 4.0,
+    "electricite_zone": 1.0,
+    "eau_courante_zone": 0.0,
+    "egouts_zone": 0.0,
+    "forage_zone": 1.0,
+    "ecole_zone": 1.0,
+    "centre_sante_zone": 1.0,
+    "marche_zone": 1.0,
+    "banque_zone": 1.0,
+    "transport_zone": 1.0,
+    "menage_radio": 1.0,
+    "menage_television": 1.0,
+    "menage_ordinateur": 0.0,
+    "menage_compte_bancaire": 0.0
+  },
+  "n": 1072,
+  "scope": "Inférence sur des profils décrits par les mêmes 17 variables que les 1 072 observations exploitables de l’enquête.",
+  "warning": "La probabilité produite décrit le comportement du modèle. Elle ne mesure pas une causalité et ne doit pas servir seule à décider pour une personne."
+}
