@@ -1,0 +1,25 @@
+# Dépendances du cours (exécution locale dans VS Code ou sur Google Colab)
+# Python 3.11 ou 3.12
+
+# Calcul scientifique et manipulation de données
+numpy~=2.0.2
+pandas~=2.2.0
+scipy~=1.16.0
+
+# Machine learning et deep learning
+scikit-learn~=1.6.1
+tensorflow~=2.18.0
+torch~=2.6.0
+
+# Détection d'objets (YOLO)
+ultralytics~=8.3.0
+
+# Graphiques et visualisation
+matplotlib~=3.10.0
+plotly~=5.24.1
+
+# Widgets interactifs
+ipywidgets~=7.7.1
+
+# Noyau Jupyter pour VS Code (déjà présent sur Colab)
+ipykernel>=6.29
