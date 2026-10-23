@@ -80,8 +80,8 @@ Cliquez sur le badge **« Open in Colab »** du notebook dans le tableau ci-dess
 Prérequis : **Python 3.11 ou 3.12**, **[VS Code](https://code.visualstudio.com/)** et ses extensions **Python** et **Jupyter**.
 
 ```bash
-git clone https://github.com/atouammi/Formation_CNN_API_Docker_Module4.git
-cd Formation_CNN_API_Docker_Module4
+git clone https://github.com/Amevi-isi/formation-chercheur-univ.git
+cd module3
 python3 -m venv .venv
 source .venv/bin/activate          # Windows : .venv\Scripts\activate
 pip install -r requirements.txt
