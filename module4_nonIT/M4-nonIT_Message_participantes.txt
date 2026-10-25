@@ -9,11 +9,13 @@ Le Jour 4 (IA générative appliquée à la recherche) se fera sur VOTRE thèse 
 2. Vos comptes, créés à l'avance :
    - un compte Google (pour Gemini et Gemini Notebook, ex-NotebookLM) ;
    - un compte gratuit sur Claude (claude.ai) et sur Grok (grok.com) ;
-   - si possible, un compte gratuit sur Semantic Scholar (semanticscholar.org).
+   - un compte gratuit sur Semantic Scholar (semanticscholar.org) et sur ResearchRabbit (researchrabbit.ai).
 
-3. 5 à 10 articles de votre bibliographie de thèse, en PDF, en libre accès, déjà téléchargés sur votre ordinateur.
+3. Votre thème de thèse (ou votre domaine d'intérêt) en une phrase, et un article clé de votre sujet : nous travaillerons sur la recherche de sujet et de « gaps ».
 
-4. Le résumé de votre thèse (ou de votre projet de thèse) et un paragraphe de votre état de l'art, en Word ou Google Docs.
+4. 5 à 10 articles de votre bibliographie de thèse, en PDF, en libre accès, déjà téléchargés sur votre ordinateur.
+
+5. Le résumé de votre thèse (ou de votre projet de thèse) et un paragraphe de votre état de l'art, en Word ou Google Docs.
 
 Important : n'apportez pas de données sensibles (entretiens ou données de patients non anonymisés, chapitres inédits). Si vous n'avez pas ces documents, ce n'est pas grave : des corpus de travail seront fournis sur place.
 
