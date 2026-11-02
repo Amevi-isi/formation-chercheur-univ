@@ -3,6 +3,7 @@ Thème : les femmes dans la recherche scientifique en Afrique
 
 À utiliser si vous n'avez pas apporté vos propres documents :
 - Lab 1 : Resume_these.docx (résumé de thèse FICTIF, avec des erreurs volontaires à trouver)
+- Lab 1 (Défi) : Test_plagiat.docx (état de l'art FICTIF contenant volontairement du plagiat, à passer dans un vérificateur gratuit)
 - Lab 2 : les 12 articles du dossier Bibliographie (articles réels, en accès libre, dont 5 en français : n° 8 à 12)
 
 Références :
