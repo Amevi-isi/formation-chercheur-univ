@@ -9,7 +9,7 @@ Usage avancé de Gemini Notebook, Gemini, Claude et Grok pour passer de sa quest
 | Fichier | Rôle |
 |---|---|
 | `00_Note_aux_superviseurs.docx` / `.pdf` | Note de présentation du kit aux superviseurs (à lire en premier) |
-| `M4-nonIT_IA_generative_appliquee.pptx` | Support de présentation (69 diapos ; partie du matin, 10h15 – 12h45 : diapos 1 à 33 ; capsules théoriques et consignes des labs) |
+| `M4-nonIT_IA_generative_appliquee.pptx` | Support de présentation (70 diapos ; partie du matin, 10h15 – 12h45 : diapos 1 à 34 ; capsules théoriques et consignes des labs) |
 | `M4-nonIT_Chronogramme_et_prerequis.docx` / `.pdf` | Chronogramme de la journée et prérequis pour les participantes |
 | `M4-nonIT_Cahier_de_labs.docx` | Cahier de labs (Labs 0, R et 2 à 5) et fiches pratiques |
 | `M4-nonIT_Fiche_pedagogique.docx` | Fiche pédagogique du module |
