@@ -11,7 +11,7 @@ Le Jour 4 (IA générative appliquée à la recherche) se fera sur VOTRE recherc
    - un compte gratuit sur Claude (claude.ai) et sur Grok (grok.com) ;
    - un compte gratuit sur Semantic Scholar (semanticscholar.org) et sur ResearchRabbit (researchrabbit.ai).
 
-3. Votre question de recherche et la fiche-question faite au J2 (question, gap, équation de recherche) : nous la consoliderons (cadre théorique, objectifs, hypothèses). Enseignantes-chercheures : la question de votre projet de recherche ou de votre prochain article. Pas encore de question ? Votre thème en une phrase suffit.
+3. Votre question de recherche et la fiche-question faite au J2 (question, gap, équation de recherche) : nous en tirerons le plan de votre article et vous en rédigerez l'introduction (cadre théorique, objectifs, plan, rédaction avec l'IA). Enseignantes-chercheures : la question de votre projet de recherche ou de votre prochain article. Pas encore de question ? Votre thème en une phrase suffit.
 
 4. 5 à 10 articles de votre bibliographie (thèse ou projet), en PDF, en libre accès, déjà téléchargés sur votre ordinateur.
 
