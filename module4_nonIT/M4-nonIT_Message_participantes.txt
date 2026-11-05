@@ -2,7 +2,7 @@ Objet : Jour 4 – IA générative appliquée à la recherche : à préparer ava
 
 Bonjour à toutes,
 
-Le Jour 4 (IA générative appliquée à la recherche) se fera sur VOTRE thèse : votre résumé, votre bibliographie, votre sujet. Pour en profiter pleinement, merci de préparer avant la séance :
+Le Jour 4 (IA générative appliquée à la recherche) se fera sur VOTRE recherche : votre thèse si vous êtes doctorante, votre projet de recherche ou un article en cours si vous êtes enseignante-chercheure. Pour en profiter pleinement, merci de préparer avant la séance :
 
 1. Un ordinateur portable chargé.
 
@@ -11,13 +11,13 @@ Le Jour 4 (IA générative appliquée à la recherche) se fera sur VOTRE thèse 
    - un compte gratuit sur Claude (claude.ai) et sur Grok (grok.com) ;
    - un compte gratuit sur Semantic Scholar (semanticscholar.org) et sur ResearchRabbit (researchrabbit.ai).
 
-3. Votre question de recherche et la fiche-question faite au J2 (question, gap, équation de recherche) : nous la consoliderons (cadre théorique, objectifs, hypothèses). Pas encore de question ? Votre thème de thèse en une phrase suffit.
+3. Votre question de recherche et la fiche-question faite au J2 (question, gap, équation de recherche) : nous la consoliderons (cadre théorique, objectifs, hypothèses). Enseignantes-chercheures : la question de votre projet de recherche ou de votre prochain article. Pas encore de question ? Votre thème en une phrase suffit.
 
-4. 5 à 10 articles de votre bibliographie de thèse, en PDF, en libre accès, déjà téléchargés sur votre ordinateur.
+4. 5 à 10 articles de votre bibliographie (thèse ou projet), en PDF, en libre accès, déjà téléchargés sur votre ordinateur.
 
-5. Le résumé de votre thèse (ou de votre projet de thèse) et un paragraphe de votre état de l'art, en Word ou Google Docs.
+5. Le résumé de votre thèse, de votre projet de recherche ou d'un article en cours, et un paragraphe de votre état de l'art, en Word ou Google Docs.
 
-Important : n'apportez pas de données sensibles (entretiens ou données de patients non anonymisés, chapitres inédits). Si vous n'avez pas ces documents, ce n'est pas grave : des corpus de travail seront fournis sur place.
+Important : n'apportez pas de données sensibles (entretiens ou données de patients non anonymisés, chapitres ou articles inédits). Si vous n'avez pas ces documents, ce n'est pas grave : des corpus de travail seront fournis sur place.
 
 À très bientôt !
 

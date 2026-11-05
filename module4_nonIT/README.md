@@ -2,7 +2,7 @@
 
 Formatrice/formateur : Ditoma KEGDIGOMA
 
-Usage avancé de Gemini Notebook, Gemini, Claude et Grok pour consolider sa question de recherche (cadre théorique, opérationnalisation, objectifs), la rédaction scientifique, l'analyse qualitative, la recherche documentaire (RAG) et la traduction. Le module couvre aussi l'intégrité scientifique : plagiat, détecteurs d'IA, articles générés par l'IA et revues prédatrices. Il rappelle aussi les bases de données ouvertes (Banque mondiale, FAOSTAT, OMS, DHS…) pour les thèses qui n'exigent pas de collecte. Public : doctorantes, volet non-IT. Répartition : environ 60 % pratique guidée, 40 % théorie.
+Usage avancé de Gemini Notebook, Gemini, Claude et Grok pour consolider sa question de recherche (cadre théorique, opérationnalisation, objectifs), la rédaction scientifique, l'analyse qualitative, la recherche documentaire (RAG) et la traduction. Le module couvre aussi l'intégrité scientifique : plagiat, détecteurs d'IA, articles générés par l'IA et revues prédatrices. Il rappelle aussi les bases de données ouvertes (Banque mondiale, FAOSTAT, OMS, DHS…) pour les thèses qui n'exigent pas de collecte. Public : doctorantes et enseignantes-chercheures, volet non-IT ; chacune travaille sur sa propre recherche (thèse, article ou projet). Répartition : environ 60 % pratique guidée, 40 % théorie.
 
 ## Contenu
 
