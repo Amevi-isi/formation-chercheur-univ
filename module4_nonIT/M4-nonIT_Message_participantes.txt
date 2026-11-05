@@ -11,7 +11,7 @@ Le Jour 4 (IA générative appliquée à la recherche) se fera sur VOTRE thèse 
    - un compte gratuit sur Claude (claude.ai) et sur Grok (grok.com) ;
    - un compte gratuit sur Semantic Scholar (semanticscholar.org) et sur ResearchRabbit (researchrabbit.ai).
 
-3. Votre thème de thèse (ou votre domaine d'intérêt) en une phrase, et un article clé de votre sujet : nous travaillerons sur la recherche de sujet et de « gaps ».
+3. Votre question de recherche et la fiche-question faite au J2 (question, gap, équation de recherche) : nous la consoliderons (cadre théorique, objectifs, hypothèses). Pas encore de question ? Votre thème de thèse en une phrase suffit.
 
 4. 5 à 10 articles de votre bibliographie de thèse, en PDF, en libre accès, déjà téléchargés sur votre ordinateur.
 

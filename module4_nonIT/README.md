@@ -2,14 +2,14 @@
 
 Formatrice/formateur : Ditoma KEGDIGOMA
 
-Usage avancé de Gemini Notebook, Gemini, Claude et Grok pour trouver son sujet de recherche, la rédaction scientifique, l'analyse qualitative, la recherche documentaire (RAG) et la traduction. Le module couvre aussi l'intégrité scientifique : plagiat, détecteurs d'IA, articles générés par l'IA et revues prédatrices. Il rappelle aussi les bases de données ouvertes (Banque mondiale, FAOSTAT, OMS, DHS…) pour les thèses qui n'exigent pas de collecte. Public : doctorantes, volet non-IT. Répartition : environ 60 % pratique guidée, 40 % théorie.
+Usage avancé de Gemini Notebook, Gemini, Claude et Grok pour consolider sa question de recherche (cadre théorique, opérationnalisation, objectifs), la rédaction scientifique, l'analyse qualitative, la recherche documentaire (RAG) et la traduction. Le module couvre aussi l'intégrité scientifique : plagiat, détecteurs d'IA, articles générés par l'IA et revues prédatrices. Il rappelle aussi les bases de données ouvertes (Banque mondiale, FAOSTAT, OMS, DHS…) pour les thèses qui n'exigent pas de collecte. Public : doctorantes, volet non-IT. Répartition : environ 60 % pratique guidée, 40 % théorie.
 
 ## Contenu
 
 | Fichier | Rôle |
 |---|---|
 | `00_Note_aux_superviseurs.docx` / `.pdf` | Note de présentation du kit aux superviseurs (à lire en premier) |
-| `M4-nonIT_IA_generative_appliquee.pptx` | Support de présentation (82 diapos : capsules théoriques et consignes des labs) |
+| `M4-nonIT_IA_generative_appliquee.pptx` | Support de présentation (78 diapos : capsules théoriques et consignes des labs) |
 | `M4-nonIT_Chronogramme_et_prerequis.docx` / `.pdf` | Chronogramme de la journée et prérequis pour les participantes |
 | `M4-nonIT_Cahier_de_labs.docx` | Cahier de labs (Labs 0, R et 1 à 5) et fiches pratiques |
 | `M4-nonIT_Fiche_pedagogique.docx` | Fiche pédagogique du module |
